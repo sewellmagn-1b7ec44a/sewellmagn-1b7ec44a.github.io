@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日大赛爆料黑料-赛事内幕爆料_比赛争议追踪_爆料真假怎么辨</title>
+<meta name="description" content="每日大赛爆料黑料聚焦各类赛事的爆料内幕与争议黑料，整理比赛判罚争议、选手场外风波、赛事组织问题等爆料内容，适合关注赛事真相与舆论走向的读者阅读参考。">
+<meta name="keywords" content="赛事内幕,比赛争议,选手风波,爆料追踪,赛事组织">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1033'/%3E%3Cpath d='M14 40 L26 22 L36 34 L50 16' stroke='%23ff5c7a' stroke-width='5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='50' cy='16' r='5' fill='%23ffd166'/%3E%3C/svg%3E">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --bg:#0f0b1a;
+  --bg-soft:#171127;
+  --panel:#1d1531;
+  --panel-2:#241a3d;
+  --line:#332650;
+  --line-soft:#2a1f44;
+  --text:#ece7f7;
+  --text-2:#b9aed3;
+  --text-3:#8a7da8;
+  --brand:#ff5c7a;
+  --brand-2:#ffd166;
+  --brand-3:#7c6cff;
+  --ok:#4cd6a8;
+  --radius:14px;
+  --radius-sm:9px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --ann-h:38px;
+  --head-h:64px;
+  --stick:calc(var(--ann-h) + var(--head-h));
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(1200px 500px at 85% -10%, rgba(124,108,255,.20), transparent 60%),
+    radial-gradient(900px 420px at 5% 0%, rgba(255,92,122,.14), transparent 60%),
+    var(--bg);
+  color:var(--text);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  font-size:15px;
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:800}
+p{margin:0 0 .85em}
+a{color:inherit;text-decoration:none}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font-family:inherit}
+:focus-visible{outline:2px solid var(--brand-2);outline-offset:2px;border-radius:4px}
+
+/* ===== 公告条 ===== */
+.annbar{
+  position:sticky;top:0;z-index:60;
+  height:var(--ann-h);
+  display:flex;align-items:center;
+  background:linear-gradient(90deg,#3a1240,#241a3d 55%,#1b2340);
+  border-bottom:1px solid var(--line);
+  font-size:13px;
+}
+.annbar .wrap{display:flex;align-items:center;gap:10px;width:100%}
+.ann-tag{
+  flex:0 0 auto;font-size:11px;font-weight:800;letter-spacing:.5px;
+  color:#1b1033;background:var(--brand-2);
+  padding:2px 8px;border-radius:20px;
+}
+.ann-text{
+  flex:1 1 auto;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+  color:#e6dcff;
+}
+.ann-text b{color:var(--brand-2);font-weight:700}
+.ann-link{flex:0 0 auto;color:var(--brand);font-weight:700;font-size:12px;border-bottom:1px dashed rgba(255,92,122,.5)}
+
+/* ===== 页头 ===== */
+.head{
+  position:sticky;top:var(--ann-h);z-index:55;
+  background:rgba(15,11,26,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.head .wrap{height:var(--head-h);display:flex;align-items:center;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand-mark{width:36px;height:36px;flex:0 0 auto;display:block}
+.brand-text{font-size:17px;font-weight:900;letter-spacing:.5px;white-space:nowrap}
+.brand-text em{font-style:normal;color:var(--brand)}
+.mainnav{display:flex;align-items:center;gap:2px;flex:1 1 auto;min-width:0;overflow-x:auto;scrollbar-width:none}
+.mainnav::-webkit-scrollbar{display:none}
+.mainnav a{
+  flex:0 0 auto;padding:6px 10px;border-radius:8px;
+  font-size:13.5px;color:var(--text-2);white-space:nowrap;
+}
+.mainnav a:hover{background:var(--panel-2);color:var(--text)}
+.head-actions{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.search-box{position:relative}
+.search-box input{
+  width:170px;height:34px;border-radius:8px;
+  border:1px solid var(--line);background:var(--panel);
+  color:var(--text);padding:0 30px 0 11px;font-size:13px;
+}
+.search-box input::placeholder{color:var(--text-3)}
+.search-box input:focus{border-color:var(--brand-3);outline:none}
+.search-box .sicon{
+  position:absolute;right:9px;top:50%;transform:translateY(-50%);
+  color:var(--text-3);font-size:13px;pointer-events:none;
+}
+.btn-hot{
+  display:inline-flex;align-items:center;height:34px;padding:0 13px;
+  border-radius:8px;background:linear-gradient(135deg,var(--brand),#ff8a5c);
+  color:#1b1033;font-weight:800;font-size:13px;white-space:nowrap;
+}
+
+.wrap{width:min(1360px,calc(100% - 40px));margin:0 auto}
+
+/* ===== 首屏 ===== */
+.hero{padding:26px 0 8px}
+.hero-grid{
+  display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:24px;
+  align-items:stretch;
+}
+.hero-main{
+  position:relative;overflow:hidden;
+  background:linear-gradient(150deg,#241a3d 0%,#1b1330 60%,#170f28 100%);
+  border:1px solid var(--line);border-radius:20px;
+  padding:30px 32px;
+  box-shadow:var(--shadow);
+}
+.hero-main::after{
+  content:"";position:absolute;right:-90px;top:-90px;width:280px;height:280px;
+  background:radial-gradient(circle,rgba(255,92,122,.28),transparent 68%);
+  pointer-events:none;
+}
+.hero-kicker{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:12px;font-weight:700;letter-spacing:1px;
+  color:var(--brand-2);background:rgba(255,209,102,.10);
+  border:1px solid rgba(255,209,102,.28);
+  padding:3px 11px;border-radius:20px;margin-bottom:14px;
+}
+.hero-kicker i{width:6px;height:6px;border-radius:50%;background:var(--brand);display:block}
+.hero h1{
+  font-size:clamp(26px,3.4vw,40px);
+  letter-spacing:1px;line-height:1.2;
+  background:linear-gradient(100deg,#fff 0%,#ffd8e0 45%,#ffb3c3 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero-sub{
+  margin:14px 0 0;color:var(--text-2);font-size:14.5px;max-width:52ch;
+}
+.hero-meta{
+  display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;
+}
+.chip{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:12px;color:var(--text-2);
+  background:var(--panel-2);border:1px solid var(--line-soft);
+  padding:4px 10px;border-radius:20px;
+}
+.chip b{color:var(--brand-2);font-weight:800}
+.hero-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:7px;
+  height:40px;padding:0 20px;border-radius:10px;
+  background:linear-gradient(135deg,var(--brand),#ff8a5c);
+  color:#1b1033;font-weight:800;font-size:14px;
+  border:none;cursor:pointer;
+}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:7px;
+  height:40px;padding:0 18px;border-radius:10px;
+  background:transparent;border:1px solid var(--line);
+  color:var(--text);font-weight:700;font-size:14px;cursor:pointer;
+}
+.btn-ghost:hover{border-color:var(--brand-3);color:#fff}
+
+.hero-side{
+  display:grid;grid-template-rows:auto 1fr;gap:14px;min-width:0;
+}
+.hero-radar{
+  background:var(--panel);border:1px solid var(--line);border-radius:20px;
+  padding:16px 18px;display:flex;align-items:center;gap:16px;
+}
+.radar-svg{width:96px;height:96px;flex:0 0 auto}
+.radar-info{min-width:0}
+.radar-info h3{font-size:14px;color:var(--text);margin-bottom:6px}
+.radar-list{font-size:12.5px;color:var(--text-2);line-height:1.9}
+.radar-list span{color:var(--brand-2);font-weight:700}
+.hero-tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tile{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:13px 14px;display:flex;flex-direction:column;justify-content:space-between;
+  min-height:86px;
+}
+.tile:hover{border-color:rgba(124,108,255,.55)}
+.tile .t-k{font-size:11.5px;color:var(--text-3);letter-spacing:.5px}
+.tile .t-v{font-size:14px;font-weight:800;margin-top:6px;line-height:1.4}
+.tile .t-v em{font-style:normal;color:var(--brand)}
+
+/* ===== 三栏 ===== */
+.layout{
+  display:grid;
+  grid-template-columns:178px minmax(0,1fr) 246px;
+  gap:24px;
+  align-items:start;
+  padding:26px 0 10px;
+}
+.side-l,.side-r{position:sticky;top:calc(var(--stick) + 14px);align-self:start}
+.panel{
+  background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius);padding:14px;
+  margin-bottom:14px;
+}
+.panel-t{
+  font-size:12px;font-weight:800;letter-spacing:1.2px;
+  color:var(--text-3);text-transform:uppercase;margin-bottom:10px;
+  display:flex;align-items:center;gap:6px;
+}
+.panel-t::before{
+  content:"";width:3px;height:12px;border-radius:2px;
+  background:linear-gradient(180deg,var(--brand),var(--brand-3));
+}
+.chan-nav li+li{margin-top:2px}
+.chan-nav a{
+  display:flex;align-items:center;gap:7px;
+  padding:6px 8px;border-radius:8px;font-size:13px;color:var(--text-2);
+}
+.chan-nav a:hover{background:var(--panel-2);color:var(--text)}
+.chan-nav a i{
+  width:5px;height:5px;border-radius:50%;background:var(--brand-3);flex:0 0 auto;
+}
+.chan-nav a span{margin-left:auto;font-size:11px;color:var(--text-3)}
+.cat-tags{display:flex;flex-wrap:wrap;gap:6px}
+.cat-tags a{
+  font-size:12px;padding:4px 9px;border-radius:20px;
+  background:var(--panel-2);border:1px solid var(--line-soft);color:var(--text-2);
+}
+.cat-tags a:hover{border-color:var(--brand);color:#fff}
+.cat-tags a.hot{border-color:rgba(255,209,102,.45);color:var(--brand-2)}
+
+.toc li+li{margin-top:1px}
+.toc a{
+  display:block;padding:5px 8px;border-radius:7px;
+  font-size:12.5px;color:var(--text-2);border-left:2px solid transparent;
+}
+.toc a:hover{background:var(--panel-2);color:var(--text);border-left-color:var(--brand)}
+.hot-list li+li{margin-top:9px;padding-top:9px;border-top:1px dashed var(--line-soft)}
+.hot-list .h-t{font-size:13px;font-weight:700;line-height:1.5}
+.hot-list .h-t:hover{color:var(--brand)}
+.hot-list .h-m{font-size:11.5px;color:var(--text-3);margin-top:2px}
+
+/* ===== 主栏板块 ===== */
+.sec{margin-bottom:26px}
+.sec-head{margin-bottom:14px}
+.sec-h2{
+  font-size:19px;display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+}
+.sec-h2::before{
+  content:"";width:4px;height:18px;border-radius:2px;flex:0 0 auto;
+  background:linear-gradient(180deg,var(--brand),var(--brand-3));
+}
+.sec-lead{font-size:13px;color:var(--text-3);margin-top:6px}
+
+/* 简介 */
+.intro-box{
+  background:linear-gradient(160deg,var(--panel) 0%,#1a1330 100%);
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;font-size:14.5px;color:#d7cfe9;
+}
+.intro-box p:last-child{margin-bottom:0}
+.intro-box strong{color:var(--brand-2);font-weight:700}
+
+/* 卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px;display:flex;flex-direction:column;gap:8px;
+  transition:border-color .18s,transform .18s;
+}
+.card:hover{border-color:rgba(255,92,122,.5);transform:translateY(-2px)}
+.card-top{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.tag{
+  font-size:11px;padding:2px 7px;border-radius:5px;
+  background:rgba(124,108,255,.16);color:#b6aaff;border:1px solid rgba(124,108,255,.3);
+}
+.tag.pink{background:rgba(255,92,122,.14);color:#ff9db0;border-color:rgba(255,92,122,.3)}
+.tag.gold{background:rgba(255,209,102,.13);color:var(--brand-2);border-color:rgba(255,209,102,.3)}
+.card h3{font-size:14.5px;line-height:1.5}
+.card h3:hover{color:var(--brand)}
+.card .c-desc{font-size:12.5px;color:var(--text-2);line-height:1.7;flex:1 1 auto}
+.card .c-foot{
+  display:flex;align-items:center;gap:10px;font-size:11.5px;color:var(--text-3);
+  border-top:1px dashed var(--line-soft);padding-top:8px;
+}
+.card .c-foot b{color:var(--brand-2);font-weight:700}
+
+/* 最新更新列表 */
+.upd-list{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.upd-item{
+  display:flex;align-items:baseline;gap:12px;
+  padding:11px 15px;background:var(--panel);
+}
+.upd-item+.upd-item{border-top:1px solid var(--line-soft)}
+.upd-item:hover{background:var(--panel-2)}
+.upd-date{
+  flex:0 0 auto;font-size:11.5px;color:var(--brand-2);
+  font-variant-numeric:tabular-nums;letter-spacing:.3px;
+}
+.upd-name{flex:0 0 auto;font-size:13.5px;font-weight:700;max-width:46%}
+.upd-sum{
+  flex:1 1 auto;font-size:12.5px;color:var(--text-3);
+  overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.cat-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:12px;display:block;
+}
+.cat-card:hover{border-color:var(--brand-3)}
+.cat-card .cc-n{font-size:13.5px;font-weight:800}
+.cat-card .cc-d{font-size:11.5px;color:var(--text-3);margin-top:4px;line-height:1.6}
+
+/* 深度解析 */
+.deep{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;font-size:14.5px;color:#d9d2ea;
+}
+.deep h3{
+  font-size:16px;margin:22px 0 9px;color:#fff;
+  display:flex;align-items:center;gap:8px;
+}
+.deep h3:first-child{margin-top:0}
+.deep h3::before{
+  content:"";width:8px;height:8px;border-radius:2px;flex:0 0 auto;
+  background:var(--brand);transform:rotate(45deg);
+}
+.deep p{margin-bottom:.8em}
+.deep ul{margin:6px 0 14px;padding-left:0}
+.deep ul li{
+  position:relative;padding-left:16px;margin-bottom:6px;font-size:14px;color:#c9c1de;
+}
+.deep ul li::before{
+  content:"";position:absolute;left:2px;top:.62em;width:5px;height:5px;
+  border-radius:50%;background:var(--brand-3);
+}
+.deep .hl{color:var(--brand-2);font-weight:700}
+.deep .quote{
+  border-left:3px solid var(--brand);background:rgba(255,92,122,.07);
+  padding:10px 14px;border-radius:0 8px 8px 0;font-size:13.5px;color:#e2d9f3;
+  margin:12px 0;
+}
+
+/* 体验指南 步骤 */
+.steps{display:grid;gap:10px}
+.step{
+  display:flex;gap:13px;background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius-sm);padding:13px 15px;
+}
+.step-n{
+  flex:0 0 auto;width:26px;height:26px;border-radius:8px;
+  display:grid;place-items:center;font-size:12.5px;font-weight:900;
+  background:linear-gradient(135deg,var(--brand),var(--brand-3));color:#150e26;
+}
+.step-b h4{font-size:14px;margin-bottom:3px}
+.step-b p{font-size:12.5px;color:var(--text-2);margin:0;line-height:1.7}
+
+/* FAQ */
+.faq{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.faq details{background:var(--panel)}
+.faq details+details{border-top:1px solid var(--line-soft)}
+.faq summary{
+  cursor:pointer;padding:13px 16px;font-size:14px;font-weight:700;
+  display:flex;align-items:center;gap:9px;list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{
+  content:"+";flex:0 0 auto;width:18px;height:18px;border-radius:5px;
+  display:grid;place-items:center;font-size:13px;font-weight:900;
+  background:var(--panel-2);color:var(--brand-2);border:1px solid var(--line);
+}
+.faq details[open] summary::before{content:"−";color:var(--brand)}
+.faq details[open] summary{color:var(--brand-2)}
+.faq .faq-a{padding:0 16px 14px 43px;font-size:13.5px;color:var(--text-2);line-height:1.8}
+
+/* 评论 */
+.cmt-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.cmt{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:12px 14px;
+}
+.cmt-top{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.avatar{
+  width:26px;height:26px;border-radius:50%;flex:0 0 auto;
+  display:grid;place-items:center;font-size:11.5px;font-weight:900;color:#170f28;
+}
+.cmt-name{font-size:12.5px;font-weight:800;color:#e7dff8}
+.cmt-time{margin-left:auto;font-size:11px;color:var(--text-3)}
+.cmt-body{font-size:13px;color:var(--text-2);line-height:1.7}
+
+/* 资讯 */
+.news-list{display:grid;gap:10px}
+.news{
+  display:grid;grid-template-columns:74px minmax(0,1fr);gap:14px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:12px 15px;align-items:start;
+}
+.news-date{
+  font-size:11.5px;color:var(--brand-2);font-variant-numeric:tabular-nums;
+  border-right:1px solid var(--line-soft);padding-right:12px;line-height:1.6;
+}
+.news h4{font-size:13.5px;margin-bottom:3px}
+.news p{font-size:12.5px;color:var(--text-3);margin:0;line-height:1.7}
+
+/* 相关推荐 标签索引 */
+.rel-tags{display:flex;flex-wrap:wrap;gap:8px}
+.rel-tags a{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13px;padding:7px 13px;border-radius:20px;
+  background:var(--panel);border:1px solid var(--line);color:var(--text-2);
+}
+.rel-tags a:hover{border-color:var(--brand);color:#fff;background:var(--panel-2)}
+.rel-tags a b{color:var(--brand-2);font-weight:800;font-size:11.5px}
+
+/* 趋势观察 */
+.trend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.trend-item{
+  background:linear-gradient(160deg,var(--panel-2),var(--panel));
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px;
+}
+.trend-item .ti-k{font-size:11.5px;color:var(--text-3);letter-spacing:.5px}
+.trend-item .ti-v{font-size:15px;font-weight:900;margin:5px 0 2px;color:var(--brand-2)}
+.trend-item .ti-d{font-size:12px;color:var(--text-2);line-height:1.65}
+
+/* 引语卡 */
+.pull{
+  background:linear-gradient(120deg,rgba(124,108,255,.16),rgba(255,92,122,.10));
+  border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 22px;display:flex;gap:16px;align-items:center;
+}
+.pull-q{font-size:30px;color:var(--brand);line-height:1;flex:0 0 auto;font-weight:900}
+.pull-t{font-size:14.5px;line-height:1.7;color:#e6ddf6}
+.pull-t span{display:block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* 无结果 */
+.noresult{
+  display:none;padding:14px 16px;border-radius:var(--radius-sm);
+  background:rgba(255,92,122,.10);border:1px dashed rgba(255,92,122,.45);
+  font-size:13px;color:#ffb3c3;margin-bottom:12px;
+}
+.noresult.show{display:block}
+.hidden{display:none !important}
+
+/* 页尾 */
+.foot{
+  margin-top:34px;border-top:1px solid var(--line);
+  background:linear-gradient(180deg,transparent,rgba(36,26,61,.6));
+  padding:30px 0 26px;
+}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:26px}
+.foot-brand{display:flex;align-items:center;gap:9px;margin-bottom:10px}
+.foot-brand .brand-mark{width:30px;height:30px}
+.foot-brand span{font-size:15px;font-weight:900}
+.foot-desc{font-size:12.5px;color:var(--text-3);line-height:1.8;max-width:34ch}
+.foot-col h4{font-size:12.5px;color:var(--text);margin-bottom:10px;letter-spacing:.5px}
+.foot-col li+li{margin-top:6px}
+.foot-col a{font-size:12.5px;color:var(--text-3)}
+.foot-col a:hover{color:var(--brand)}
+.foot-bottom{
+  margin-top:24px;padding-top:16px;border-top:1px solid var(--line-soft);
+  display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;
+  font-size:11.5px;color:var(--text-3);
+}
+.foot-bottom .dot{opacity:.5}
+
+/* 锚点偏移 */
+[id]{scroll-margin-top:calc(var(--stick) + 16px)}
+
+/* ===== 响应式 ===== */
+@media (max-width:1180px){
+  .layout{grid-template-columns:170px minmax(0,1fr);}
+  .side-r{position:static;grid-column:1 / -1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+  .side-r .panel{margin-bottom:0}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-side{grid-template-rows:auto auto}
+}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .side-l{position:static;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .side-l .panel{margin-bottom:0}
+  .card-grid{grid-template-columns:1fr 1fr}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .cmt-grid{grid-template-columns:1fr}
+  .trend{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .mainnav{order:3}
+  .head .wrap{flex-wrap:wrap;height:auto;padding:10px 0;gap:10px 14px}
+  .head{position:sticky;top:var(--ann-h)}
+  .mainnav{width:100%;}
+  .search-box input{width:130px}
+}
+@media (max-width:620px){
+  .wrap{width:calc(100% - 24px)}
+  .hero-main{padding:22px 18px;border-radius:16px}
+  .hero-btns .btn-primary,.hero-btns .btn-ghost{flex:1 1 auto;justify-content:center}
+  .card-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:1fr 1fr}
+  .side-l{grid-template-columns:1fr}
+  .side-r{grid-template-columns:1fr}
+  .upd-item{flex-wrap:wrap;gap:4px 10px}
+  .upd-name{max-width:100%}
+  .upd-sum{white-space:normal;flex-basis:100%}
+  .news{grid-template-columns:1fr}
+  .news-date{border-right:none;border-bottom:1px solid var(--line-soft);padding:0 0 6px}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-tiles{grid-template-columns:1fr}
+  .annbar{font-size:12px}
+  .deep{padding:18px 16px;font-size:14px}
+  .intro-box{padding:16px}
+  .faq .faq-a{padding-left:16px}
+  .head-actions .btn-hot{display:none}
+  .search-box input{width:110px}
+}
+</style>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="annbar" id="annbar">
+  <div class="wrap">
+    <span class="ann-tag">爆料速递</span>
+    <span class="ann-text">本周新增 <b>裁判争议</b> 与 <b>选手退赛风波</b> 多起爆料线索，涉及 3 项常规赛与 2 项杯赛，正在交叉核实中</span>
+    <a class="ann-link" href="/#latest">查看更新</a>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="head">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="每日大赛爆料黑料 首页">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#241a3d"/>
+        <path d="M14 42 L26 22 L36 34 L50 16" stroke="#ff5c7a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="50" cy="16" r="5" fill="#ffd166"/>
+        <path d="M14 50 h36" stroke="#7c6cff" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">每日大赛爆料<em>黑料</em></span>
+    </a>
+    <nav class="mainnav" aria-label="主题频道导航">
+      <a href="/#intro">内容简介</a>
+      <a href="/#hot">热门爆料</a>
+      <a href="/#latest">最新动态</a>
+      <a href="/#cats">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问答</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#rel">相关推荐</a>
+    </nav>
+    <div class="head-actions">
+      <div class="search-box">
+        <input type="search" id="siteSearch" placeholder="搜爆料、选手、赛事" aria-label="站内搜索爆料内容">
+        <span class="sicon" aria-hidden="true">⌕</span>
+      </div>
+      <a class="btn-hot" href="/#hot">今日爆料</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-main">
+        <span class="hero-kicker"><i></i>赛事内幕 · 争议追踪 · 线索核实</span>
+        <h1>每日大赛爆料黑料</h1>
+        <p class="hero-sub">围绕各类大型赛事的爆料线索，整理比赛判罚争议、选手场外风波、赛事组织问题与圈内传闻，标注可信度与核实进度，帮你在信息混杂的舆论场里看清来龙去脉。</p>
+        <div class="hero-meta">
+          <span class="chip">今日新增 <b>9</b> 条</span>
+          <span class="chip">待核实 <b>23</b> 条</span>
+          <span class="chip">已回应 <b>6</b> 起</span>
+          <span class="chip">覆盖赛事 <b>12</b> 项</span>
+        </div>
+        <div class="hero-btns">
+          <a class="btn-primary" href="/#hot">进入爆料列表 →</a>
+          <a class="btn-ghost" href="/#deep">看争议深度解析</a>
+        </div>
+      </div>
+
+      <div class="hero-side">
+        <div class="hero-radar">
+          <svg class="radar-svg" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="#332650" stroke-width="2"/>
+            <circle cx="50" cy="50" r="30" fill="none" stroke="#332650" stroke-width="2"/>
+            <circle cx="50" cy="50" r="16" fill="none" stroke="#332650" stroke-width="2"/>
+            <path d="M50 50 L50 6 A44 44 0 0 1 88 30 Z" fill="rgba(255,92,122,.22)"/>
+            <path d="M50 50 L50 6" stroke="#ff5c7a" stroke-width="2"/>
+            <circle cx="72" cy="34" r="3.5" fill="#ffd166"/>
+            <circle cx="36" cy="66" r="3" fill="#7c6cff"/>
+            <circle cx="62" cy="72" r="2.6" fill="#4cd6a8"/>
+          </svg>
+          <div class="radar-info">
+            <h3>爆料热度雷达</h3>
+            <div class="radar-list">
+              判罚争议 <span>38%</span><br>
+              选手场外 <span>27%</span><br>
+              赛事组织 <span>21%</span><br>
+              圈内传闻 <span>14%</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-tiles">
+          <a class="tile" href="/#deep">
+            <span class="t-k">焦点争议</span>
+            <span class="t-v">决赛<b>判罚回放</b>被指漏判</span>
+          </a>
+          <a class="tile" href="/#latest">
+            <span class="t-k">今日更新</span>
+            <span class="t-v">选手退赛<em>真实原因</em></span>
+          </a>
+          <a class="tile" href="/#cats">
+            <span class="t-k">分类筛选</span>
+            <span class="t-v">按赛事与<b>爆料类型</b>找线索</span>
+          </a>
+          <a class="tile" href="/#faq">
+            <span class="t-k">辨真假</span>
+            <span class="t-v">爆料<em>可信度</em>怎么看</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 三栏主体 -->
+  <div class="wrap layout">
+
+    <!-- 左栏 -->
+    <aside class="side-l" aria-label="频道与分类索引">
+      <div class="panel">
+        <div class="panel-t">频道导航</div>
+        <ul class="chan-nav">
+          <li><a href="/#intro"><i></i>内容简介<span>01</span></a></li>
+          <li><a href="/#hot"><i></i>热门爆料<span>02</span></a></li>
+          <li><a href="/#latest"><i></i>最新动态<span>03</span></a></li>
+          <li><a href="/#cats"><i></i>分类入口<span>04</span></a></li>
+          <li><a href="/#deep"><i></i>深度解析<span>05</span></a></li>
+          <li><a href="/#guide"><i></i>体验指南<span>06</span></a></li>
+          <li><a href="/#faq"><i></i>常见问答<span>07</span></a></li>
+          <li><a href="/#cmt"><i></i>读者评论<span>08</span></a></li>
+          <li><a href="/#news"><i></i>相关资讯<span>09</span></a></li>
+          <li><a href="/#rel"><i></i>相关推荐<span>10</span></a></li>
+          <li><a href="/#trend"><i></i>趋势观察<span>11</span></a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-t">爆料类型</div>
+        <div class="cat-tags">
+          <a href="/#cats">判罚争议</a>
+          <a href="/#cats">选手退赛</a>
+          <a class="hot" href="/#cats">赛程改期</a>
+          <a href="/#cats">奖金分配</a>
+          <a href="/#cats">教练内讧</a>
+          <a href="/#cats">抽签质疑</a>
+          <a href="/#cats">数据造假</a>
+          <a href="/#cats">场外风波</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <div class="side-c">
+
+      <!-- 1 内容简介 -->
+      <section class="sec" id="intro">
+        <div class="sec-head">
+          <h2 class="sec-h2">内容简介：这里整理什么样的赛事爆料</h2>
+          <p class="sec-lead">先讲清楚覆盖范围、线索来源与判断标准，再决定要不要继续往下看。</p>
+        </div>
+        <div class="intro-box">
+          <p><strong>每日大赛爆料黑料</strong>面向关注大型赛事舆论走向的读者，把散落在社交平台、赛后发布会、选手直播和观众讨论里的爆料线索集中起来，按赛事、类型和核实进度重新编排。这里既有比赛判罚争议的现场还原，也有选手场外风波的来龙去脉，还包括赛事组织层面的赛程改期、奖金分配、抽签规则等容易被忽略的问题。</p>
+          <p>我们更在意线索的“可追”程度，而不是标题有多炸。一条爆料进来，会先记录它出现在哪里、谁先说的、有没有第二来源，再标注“待核实”“多方交叉”“已有回应”三种状态。判罚类争议会尽量附上时间点与规则条款，选手风波会区分当事人陈述与第三方转述，组织问题则对照公开赛程与公告逐条比对。这样做的目的很简单：让读者在刷到同类传闻时，能快速判断哪些值得继续跟，哪些只是情绪放大。</p>
+          <p>内容覆盖篮球、足球、电竞、综合格斗、路跑与棋类等常见大赛场景。不同项目的爆料节奏差别很大，电竞赛事往往赛后几小时内就有大量讨论，路跑与棋类则更集中在报名、抽签和成绩公示阶段。页面会按项目分区呈现，避免把不同规则的争议混在一起讲。</p>
+          <p>如果你只是想吃瓜看热闹，热门爆料和最新动态足够；如果你想弄清一场争议到底卡在哪，深度解析会把规则、时间线和各方说法拆开讲。所有条目都标注示例性的热度与更新时间，方便你按自己的关注强度选择阅读顺序。</p>
+        </div>
+      </section>
+
+      <!-- 2 热门内容推荐 -->
+      <section class="sec" id="hot">
+        <div class="sec-head">
+          <h2 class="sec-h2">热门爆料：近期讨论度较高的争议线索</h2>
+          <p class="sec-lead">按讨论热度排序，卡片标注类型、核实状态与关键看点。</p>
+        </div>
+        <div class="noresult" id="noResult">没有找到匹配的爆料条目，换个选手名、赛事名或争议类型试试。</div>
+        <div class="card-grid" id="hotGrid">
+          <article class="card">
+            <div class="card-top"><span class="tag pink">判罚争议</span><span class="tag">待核实</span></div>
+            <h3>决赛终场前那次改判，规则依据站得住吗</h3>
+            <p class="c-desc">末节最后 12 秒的判罚被现场回放质疑，裁判组赛后未做说明，两队教练表态明显对立。</p>
+            <div class="c-foot"><span>热度 <b>9821</b></span><span>更新 3 小时前</span></div>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="tag gold">选手风波</span><span class="tag">多方交叉</span></div>
+            <h3>主力选手赛前退赛，队内说法与官方公告不一致</h3>
+            <p class="c-desc">俱乐部称旧伤复发，选手直播中却提到“另有安排”，两条时间线对不上，引发大量猜测。</p>
+            <div class="c-foot"><span>热度 <b>9140</b></span><span>更新 5 小时前</span></div>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="tag">赛事组织</span><span class="tag">已有回应</span></div>
+            <h3>半决赛赛程临时改期，客队行程被打乱</h3>
+            <p class="c-desc">官方以场地维护为由调整开赛时间，客队教练公开质疑通知过晚，影响备战节奏。</p>
+            <div class="c-foot"><span>热度 <b>8733</b></span><span>更新 6 小时前</span></div>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="tag">抽签质疑</span><span class="tag">待核实</span></div>
+            <h3>杯赛抽签被指“分区过于集中”，流程遭追问</h3>
+            <p class="c-desc">同一半区聚集多支强队，观众翻出往届签表对比，要求公开抽签监督记录。</p>
+            <div class="c-foot"><span>热度 <b>8206</b></span><span>更新 8 小时前</span></div>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="tag pink">奖金分配</span><span class="tag">多方交叉</span></div>
+            <h3>奖金池分配方案流出，替补选手份额引争议</h3>
+            <p class="c-desc">网传分配表显示替补与主力差距悬殊，多名选手在社交平台以模糊措辞表达不满。</p>
+            <div class="c-foot"><span>热度 <b>7955</b></span><span>更新 10 小时前</span></div>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="tag gold">教练内讧</span><span class="tag">待核实</span></div>
+            <h3>教练组临场指挥分歧，暂停期间画面被反复解读</h3>
+            <p class="c-desc">转播镜头拍到两名教练在暂停时手势相反，赛后一方未出席发布会，留下想象空间。</p>
+            <div class="c-foot"><span>热度 <b>7612</b></span><span>更新 12 小时前</span></div>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="tag">数据造假</span><span class="tag">已有回应</span></div>
+            <h3>赛后跑动数据被指异常，技术方给出解释</h3>
+            <p class="c-desc">有观众发现某球员跑动距离与转播画面不符，技术供应方称传感器存在短时漂移。</p>
+            <div class="c-foot"><span>热度 <b>7044</b></span><span>更新 14 小时前</span></div>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="tag pink">场外风波</span><span class="tag">待核实</span></div>
+            <h3>赛后混采区冲突，双方各执一词</h3>
+            <p class="c-desc">一段短视频显示两队工作人员在通道内争执，赛事方表示已调取完整监控。</p>
+            <div class="c-foot"><span>热度 <b>6890</b></span><span>更新 16 小时前</span></div>
+          </article>
+          <article class="card">
+            <div class="card-top"><span class="tag gold">判罚争议</span><span class="tag">多方交叉</span></div>
+            <h3>越位判罚划线角度被质疑，技术回放成焦点</h3>
+            <p class="c-desc">慢镜头显示划线基准点存疑，解说与裁判专家给出不同解读，联盟尚未回应。</p>
+            <div class="c-foot"><span>热度 <b>6503</b></span><span>更新 18 小时前</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3 最新更新 -->
+      <section class="sec" id="latest">
+        <div class="sec-head">
+          <h2 class="sec-h2">最新动态：爆料线索更新与核实进度</h2>
+          <p class="sec-lead">按时间倒序，记录新线索出现与旧线索的新进展。</p>
+        </div>
+        <ul class="upd-list">
+          <li class="upd-item"><span class="upd-date">06-11</span><span class="upd-name">决赛改判争议</span><span class="upd-sum">裁判组内部复盘记录被曝存在两处表述差异，联盟称将统一口径</span></li>
+          <li class="upd-item"><span class="upd-date">06-11</span><span class="upd-name">选手退赛风波</span><span class="upd-sum">俱乐部发布第二份说明，仍未回应直播中提到的“另行安排”</span></li>
+          <li class="upd-item"><span class="upd-date">06-10</span><span class="upd-name">赛程改期</span><span class="upd-sum">客队提交书面异议，赛事方承诺后续调整提前 72 小时通知</span></li>
+          <li class="upd-item"><span class="upd-date">06-10</span><span class="upd-name">奖金分配表</span><span class="upd-sum">流出文件被指为旧版草案，选手公会要求公开正式版本</span></li>
+          <li class="upd-item"><span class="upd-date">06-10</span><span class="upd-name">抽签质疑</span><span class="upd-sum">监督记录部分公开，关键环节仍以“流程合规”概括</span></li>
+          <li class="upd-item"><span class="upd-date">06-09</span><span class="upd-name">教练组分歧</span><span class="upd-sum">当事人之一首次回应，称“战术讨论属正常范围”</span></li>
+          <li class="upd-item"><span class="upd-date">06-09</span><span class="upd-name">跑动数据漂移</span><span class="upd-sum">技术方公布校准日志，承认两场比赛存在短时异常</span></li>
+          <li class="upd-item"><span class="upd-date">06-09</span><span class="upd-name">混采区冲突</span><span class="upd-sum">赛事方公布处理结果，两队各有一名工作人员被口头警告</span></li>
+          <li class="upd-item"><span class="upd-date">06-08</span><span class="upd-name">越位划线争议</span><span class="upd-sum">联盟裁判委员会表示将复核划线流程，暂不改变比赛结果</span></li>
+          <li class="upd-item"><span class="upd-date">06-08</span><span class="upd-name">替补名额调整</span><span class="upd-sum">赛事手册更新一版，替补报名截止时间提前，各队反应不一</span></li>
+        </ul>
+      </section>
+
+      <!-- 4 分类入口 -->
+      <section class="sec" id="cats">
+        <div class="sec-head">
+          <h2 class="sec-h2">分类入口：按争议类型找爆料线索</h2>
+          <p class="sec-lead">八个常见方向，每个方向对应不同的核实方式与关注人群。</p>
+        </div>
+        <div class="cat-grid">
+          <a class="cat-card" href="/#hot"><div class="cc-n">判罚争议</div><div class="cc-d">改判、漏判、回放划线、裁判报告缺位</div></a>
+          <a class="cat-card" href="/#hot"><div class="cc-n">选手退赛</div><div class="cc-d">伤情说明、临阵缺席、队内沟通断层</div></a>
+          <a class="cat-card" href="/#hot"><div class="cc-n">赛程改期</div><div class="cc-d">场地维护、通知时效、客队行程影响</div></a>
+          <a class="cat-card" href="/#hot"><div class="cc-n">奖金分配</div><div class="cc-d">奖金池结构、替补份额、发放时间差</div></a>
+          <a class="cat-card" href="/#hot"><div class="cc-n">教练内讧</div><div class="cc-d">临场指挥分歧、暂停画面、赛后缺席</div></a>
+          <a class="cat-card" href="/#hot"><div class="cc-n">抽签质疑</div><div class="cc-d">分区集中、种子排序、监督记录公开度</div></a>
+          <a class="cat-card" href="/#hot"><div class="cc-n">数据造假</div><div class="cc-d">跑动统计、传感器漂移、数据口径差异</div></a>
+          <a class="cat-card" href="/#hot"><div class="cc-n">场外风波</div><div class="cc-d">通道冲突、社媒发言、纪律处理结果</div></a>
+        </div>
+      </section>
+
+      <!-- 5 深度解析 -->
+      <section class="sec" id="deep">
+        <div class="sec-head">
+          <h2 class="sec-h2">深度解析：一场赛事争议是怎么被放大又被澄清的</h2>
+          <p class="sec-lead">从线索出现到各方回应，拆解爆料传播中的四个关键环节。</p>
+        </div>
+        <div class="deep">
+          <h3>争议往往从一个可复现的画面开始</h3>
+          <p>绝大多数赛事争议并不是凭空出现的，它通常有一个能被反复观看的画面：一次改判手势、一段暂停时的教练交流、一张被截取的跑动数据图。画面本身不带结论，但它给了所有人同一个讨论起点。此时最先出现的往往是情绪化解读，比如“明显偏袒”“肯定有问题”，这些说法传播最快，却最缺乏细节。</p>
+          <p>判断一条线索值不值得跟，第一步看它有没有可定位的时间点。比如“末节最后 12 秒”比“比赛快结束时”有用得多，因为前者能对应到具体回合、具体判罚记录和赛后报告。没有时间点的爆料，多半只能停留在情绪层面。</p>
+          <h3>规则条款决定了争议有没有落脚点</h3>
+          <p>判罚类爆料最容易陷入各说各话，原因在于很多人只看结果，不看规则。真正有讨论价值的争议，通常能落到某一条具体条款上：回放介入的条件是什么、划线基准点如何选取、裁判是否有权在终场后追加说明。把这些条款找出来，争议就从“谁对谁错”变成“流程有没有按规则走”。</p>
+          <ul>
+            <li>先确认该项目当赛季使用的规则版本，不同赛季条款可能不同。</li>
+            <li>再核对争议动作是否落在回放介入范围内，超出范围则讨论基础不成立。</li>
+            <li>最后看赛后是否有裁判报告或联盟说明，缺位本身就是一种信号。</li>
+          </ul>
+          <p>这也是<strong>每日大赛爆料黑料</strong>在处理判罚线索时坚持附条款的原因：没有条款支撑的指控，热度再高也很难推进到下一步。</p>
+          <h3>多方说法的时间线比单方陈述更有价值</h3>
+          <p>选手退赛、教练内讧、场外风波这类线索，核心矛盾往往不在事实本身，而在各方说法的先后顺序。俱乐部先发公告、选手后开直播、赛事方再补说明，三个动作的时间差会直接改变舆论走向。把时间线拉出来，很多看似矛盾的说法其实只是信息发布节奏不同造成的错觉。</p>
+          <div class="quote">一个常见误区是：把“说法不一致”直接等同于“有人在撒谎”。实际上，不同主体掌握的信息范围不同，先发言的一方往往只能给出保守表述，后发言的一方才有机会补充细节。</div>
+          <p>处理这类线索时，我们更关注三件事：谁先说的、说了什么、有没有被后续信息推翻。三方都保持沉默的争议，通常会标注为“停滞”，而不是继续堆猜测。</p>
+          <h3>核实进度比结论更值得公开</h3>
+          <p>赛事爆料的特殊性在于，很多争议最终不会有让所有人满意的结论。联盟可能只发一句“流程合规”，俱乐部可能以“内部处理”收尾，选手可能不再回应。这时候继续追问“真相到底是什么”意义有限，公开核实进度反而更实用：哪些说法已被证实、哪些被证伪、哪些仍无第二来源。</p>
+          <p>把进度写清楚，读者就能自己判断该不该继续关注。对<strong>每日大赛爆料黑料</strong>来说，一条线索从“待核实”走到“已有回应”，本身就是完整的内容增量，不需要靠夸张标题制造第二次传播。赛事组织层面的问题同样如此，赛程改期是否提前通知、抽签监督记录公开到什么程度，这些细节比一句“存在黑幕”更能推动讨论。</p>
+        </div>
+      </section>
+
+      <!-- 6 体验指南 -->
+      <section class="sec" id="guide">
+        <div class="sec-head">
+          <h2 class="sec-h2">体验指南：怎么用这个页面高效追一条爆料</h2>
+          <p class="sec-lead">四步走，从找到线索到判断可信度。</p>
+        </div>
+        <div class="steps">
+          <div class="step"><span class="step-n">1</span><div class="step-b"><h4>先用搜索框定位具体赛事或选手</h4><p>输入赛事名、选手名或争议类型关键词，页面会即时筛选热门爆料卡片，没有匹配结果时会给出提示，避免无效翻找。</p></div></div>
+          <div class="step"><span class="step-n">2</span><div class="step-b"><h4>按分类入口缩小范围</h4><p>判罚争议、选手退赛、赛程改期等八个方向对应不同的核实方式。先确定类型，再看该类型下的线索，比从头刷到尾更快。</p></div></div>
+          <div class="step"><span class="step-n">3</span><div class="step-b"><h4>看核实状态再决定跟不跟</h4><p>“待核实”表示目前只有单一来源，“多方交叉”表示至少两个独立渠道提到，“已有回应”表示当事方或赛事方已公开表态。状态比热度更能说明问题。</p></div></div>
+          <div class="step"><span class="step-n">4</span><div class="step-b"><h4>用深度解析补齐规则背景</h4><p>遇到看不懂的判罚争议，先读深度解析里的规则条款部分，再回看具体条目，能明显减少误判。移动端左右栏会折叠到主内容之后，不影响阅读顺序。</p></div></div>
+        </div>
+      </section>
+
+      <!-- 7 FAQ -->
+      <section class="sec" id="faq">
+        <div class="sec-head">
+          <h2 class="sec-h2">常见问答：关于赛事爆料你最想知道的</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>每日大赛爆料黑料里的内容都是真的吗？</summary>
+            <div class="faq-a">不是所有条目都已被证实。页面会标注“待核实”“多方交叉”“已有回应”三种状态，分别对应单一来源、多个独立来源和当事方公开表态。建议把标注当作参考，而不是结论。</div>
+          </details>
+          <details>
+            <summary>赛事判罚争议一般多久会有官方回应？</summary>
+            <div class="faq-a">不同项目差别很大。电竞赛事通常在赛后 24 小时内由联盟或赛事方给出说明，传统球类可能延后到下一个比赛日，部分争议只在裁判报告中一笔带过。超过一周仍无回应的，页面会标注为“停滞”。</div>
+          </details>
+          <details>
+            <summary>选手退赛的爆料为什么经常前后说法不一致？</summary>
+            <div class="faq-a">常见原因是信息发布节奏不同：俱乐部先发简短公告，选手随后在直播中补充个人视角，赛事方再给出报名层面的说明。三方掌握的信息范围不同，表述自然有差异，需要结合时间线看。</div>
+          </details>
+          <details>
+            <summary>怎么判断一条赛事黑料值不值得继续关注？</summary>
+            <div class="faq-a">看三点：有没有具体时间点、能不能对应到规则条款、是否有第二来源。三点都具备的线索通常能推进到官方回应；只有情绪描述、没有细节的，多半会停留在传闻阶段。</div>
+          </details>
+          <details>
+            <summary>赛程改期和抽签质疑这类组织问题，普通观众能做什么？</summary>
+            <div class="faq-a">主要是留存公开信息：公告发布时间、通知渠道、监督记录公开程度。这些材料是后续讨论的基础。页面会按时间整理相关公告，方便对照。</div>
+          </details>
+          <details>
+            <summary>页面适合什么类型的读者看？</summary>
+            <div class="faq-a">适合关注赛事舆论、想弄清争议来龙去脉的读者，包括长期追赛的观众、内容创作者和需要了解规则背景的从业者。只想看结论、不愿读规则的读者，可能会觉得深度解析部分偏细。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8 用户评论 -->
+      <section class="sec" id="cmt">
+        <div class="sec-head">
+          <h2 class="sec-h2">读者评论：来自追赛观众的即时反馈</h2>
+          <p class="sec-lead">语气各异，包含中性评价与不同意见。</p>
+        </div>
+        <div class="cmt-grid">
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#ff5c7a">林</span><span class="cmt-name">林间看台</span><span class="cmt-time">2 小时前</span></div><div class="cmt-body">改判那条我反复看了回放，划线角度确实有点怪，但说“故意”就过了，等联盟说明吧。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#ffd166">陈</span><span class="cmt-name">陈默追赛</span><span class="cmt-time">3 小时前</span></div><div class="cmt-body">选手退赛那个时间线整理得挺清楚，之前只看到片段，现在能对上公告顺序了。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#7c6cff">阿</span><span class="cmt-name">阿岩不熬夜</span><span class="cmt-time">4 小时前</span></div><div class="cmt-body">说实话有些条目还是偏猜测，标注“待核实”算克制了，希望别为了热度硬推。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4cd6a8">南</span><span class="cmt-name">南看台老周</span><span class="cmt-time">5 小时前</span></div><div class="cmt-body">抽签质疑那块往届签表对比做得不错，比单纯喊黑幕有说服力。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#ff8a5c">小</span><span class="cmt-name">小满看电竞</span><span class="cmt-time">6 小时前</span></div><div class="cmt-body">电竞爆料更新是真的快，赛后两小时就有条目了，不过有时候太早，信息还没齐。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#ff5c7a">夜</span><span class="cmt-name">夜航船</span><span class="cmt-time">7 小时前</span></div><div class="cmt-body">奖金分配表那个我持保留态度，流出文件没头没尾，说是旧版草案也说得通。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#7c6cff">路</span><span class="cmt-name">路边社观察</span><span class="cmt-time">8 小时前</span></div><div class="cmt-body">分类入口挺实用，按“赛程改期”筛了一下，发现同类问题这赛季不止一次。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#ffd166">何</span><span class="cmt-name">何同学看球</span><span class="cmt-time">9 小时前</span></div><div class="cmt-body">深度解析里讲规则版本那段有用，很多人拿旧规则说新争议，容易吵错方向。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4cd6a8">木</span><span class="cmt-name">木木不迷路</span><span class="cmt-time">10 小时前</span></div><div class="cmt-body">跑动数据那条技术方解释算合理，传感器漂移确实存在，但两场都异常还是有点巧。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#ff8a5c">一</span><span class="cmt-name">一只看客</span><span class="cmt-time">11 小时前</span></div><div class="cmt-body">页面信息量有点大，第一次进来不知道从哪看，后来按热门往下刷就顺了。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#ff5c7a">北</span><span class="cmt-name">北纬三十度</span><span class="cmt-time">12 小时前</span></div><div class="cmt-body">教练内讧那个暂停画面被反复解读，其实可能只是手势习惯不同，别过度脑补。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#7c6cff">徐</span><span class="cmt-name">徐三岁</span><span class="cmt-time">14 小时前</span></div><div class="cmt-body">混采区冲突处理结果出来了，口头警告算轻的，至少给了明确说法。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#ffd166">老</span><span class="cmt-name">老蒋说棋</span><span class="cmt-time">16 小时前</span></div><div class="cmt-body">棋类赛事的爆料这里也有，虽然少，但抽签和用时争议讲得比较细，难得。</div></div>
+          <div class="cmt"><div class="cmt-top"><span class="avatar" style="background:#4cd6a8">q</span><span class="cmt-name">qiuqiu不困</span><span class="cmt-time">18 小时前</span></div><div class="cmt-body">希望多来点“已有回应”的条目，光有爆料没有后续，看多了会疲劳。</div></div>
+        </div>
+      </section>
+
+      <!-- 9 相关资讯 -->
+      <section class="sec" id="news">
+        <div class="sec-head">
+          <h2 class="sec-h2">相关资讯：赛事舆论场的新动向</h2>
+        </div>
+        <div class="news-list">
+          <article class="news"><div class="news-date">06-11</div><div><h4>多项目联盟收紧赛后说明时限</h4><p>部分赛事方开始要求裁判组在赛后固定时间内提交书面说明，回应判罚争议处理过慢的问题。</p></div></article>
+          <article class="news"><div class="news-date">06-10</div><div><h4>选手公会推动奖金分配透明化</h4><p>多个项目的选手组织提出公开奖金池结构的诉求，替补份额成为讨论焦点。</p></div></article>
+          <article class="news"><div class="news-date">06-09</div><div><h4>抽签监督记录公开程度引发讨论</h4><p>观众对抽签流程的追问从结果转向过程，监督记录是否完整公开成为新的关注点。</p></div></article>
+          <article class="news"><div class="news-date">06-08</div><div><h4>赛程调整通知时效被写入赛事手册</h4><p>部分赛事在最新手册中明确改期通知的最小时限，客队行程保障条款同步细化。</p></div></article>
+          <article class="news"><div class="news-date">06-07</div><div><h4>数据统计口径差异进入技术复核流程</h4><p>跑动与位移数据异常被纳入赛后技术复核，供应方需提交校准日志。</p></div></article>
+          <article class="news"><div class="news-date">06-06</div><div><h4>场外冲突处理结果公示成为常态</h4><p>越来越多赛事方在纪律处理上给出公开结论，虽表述简略，但比沉默更利于平息猜测。</p></div></article>
+        </div>
+      </section>
+
+      <!-- 10 相关推荐 -->
+      <section class="sec" id="rel">
+        <div class="sec-head">
+          <h2 class="sec-h2">相关推荐：值得继续追的爆料方向</h2>
+          <p class="sec-lead">按具体方向列出，便于直接搜索对应内容。</p>
+        </div>
+        <div class="rel-tags">
+          <a href="/#hot">决赛改判回放争议 <b>热度高</b></a>
+          <a href="/#hot">选手赛前退赛真实原因</a>
+          <a href="/#hot">杯赛抽签分区质疑</a>
+          <a href="/#hot">替补奖金份额差距</a>
+          <a href="/#hot">教练暂停手势分歧</a>
+          <a href="/#hot">越位划线基准点争议</a>
+          <a href="/#hot">跑动数据传感器漂移</a>
+          <a href="/#hot">混采区通道冲突处理</a>
+        </div>
+      </section>
+
+      <!-- 11 趋势观察 -->
+      <section class="sec" id="trend">
+        <div class="sec-head">
+          <h2 class="sec-h2">趋势观察：爆料传播正在发生的变化</h2>
+        </div>
+        <div class="trend">
+          <div class="trend-item"><div class="ti-k">回应速度</div><div class="ti-v">24 小时内</div><div class="ti-d">电竞与部分球类赛事已把赛后说明压缩到一天内，拖延本身开始被视为问题。</div></div>
+          <div class="trend-item"><div class="ti-k">证据偏好</div><div class="ti-v">时间点 + 条款</div><div class="ti-d">只有情绪描述的爆料热度下降明显，能对应规则条款的线索更受关注。</div></div>
+          <div class="trend-item"><div class="ti-k">讨论焦点</div><div class="ti-v">流程公开度</div><div class="ti-d">从追问“谁对谁错”转向“流程是否公开”，抽签与奖金分配是典型场景。</div></div>
+        </div>
+      </section>
+
+      <!-- 引语卡 -->
+      <section class="sec">
+        <div class="pull">
+          <div class="pull-q">“</div>
+          <div class="pull-t">爆料的价值不在于说得多狠，而在于能不能被一条条核实。能把进度写清楚的页面，才值得反复打开。
+            <span>—— 一位长期追赛读者的留言（示例）</span>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 右栏 -->
+    <aside class="side-r" aria-label="辅助阅读">
+      <div class="panel">
+        <div class="panel-t">页内目录</div>
+        <ul class="toc">
+          <li><a href="/#intro">内容简介</a></li>
+          <li><a href="/#hot">热门爆料</a></li>
+          <li><a href="/#latest">最新动态</a></li>
+          <li><a href="/#cats">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#cmt">读者评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#rel">相关推荐</a></li>
+          <li><a href="/#trend">趋势观察</a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-t">热门条目</div>
+        <ul class="hot-list">
+          <li><a class="h-t" href="/#hot">决赛终场前改判，规则依据站得住吗</a><div class="h-m">判罚争议 · 热度 9821</div></li>
+          <li><a class="h-t" href="/#hot">主力选手赛前退赛，两套说法对不上</a><div class="h-m">选手风波 · 热度 9140</div></li>
+          <li><a class="h-t" href="/#hot">半决赛赛程临时改期，客队行程被打乱</a><div class="h-m">赛事组织 · 热度 8733</div></li>
+          <li><a class="h-t" href="/#hot">杯赛抽签被指分区过于集中</a><div class="h-m">抽签质疑 · 热度 8206</div></li>
+          <li><a class="h-t" href="/#hot">奖金池分配方案流出，替补份额引争议</a><div class="h-m">奖金分配 · 热度 7955</div></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <div class="panel-t">延伸阅读</div>
+        <ul class="hot-list">
+          <li><a class="h-t" href="/#deep">回放介入规则怎么读</a><div class="h-m">深度解析 · 判罚条款</div></li>
+          <li><a class="h-t" href="/#deep">多方说法时间线怎么排</a><div class="h-m">深度解析 · 线索核实</div></li>
+          <li><a class="h-t" href="/#guide">核实状态三种标注的含义</a><div class="h-m">体验指南 · 使用说明</div></li>
+          <li><a class="h-t" href="/#trend">赛事回应速度的变化</a><div class="h-m">趋势观察 · 舆论动向</div></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<!-- 页尾 -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#241a3d"/>
+            <path d="M14 42 L26 22 L36 34 L50 16" stroke="#ff5c7a" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="50" cy="16" r="5" fill="#ffd166"/>
+            <path d="M14 50 h36" stroke="#7c6cff" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <span>每日大赛爆料黑料</span>
+        </div>
+        <p class="foot-desc">聚焦赛事爆料与争议线索，按类型、核实进度和时间线整理，帮你看清每一条传闻的来龙去脉。</p>
+      </div>
+      <div class="foot-col">
+        <h4>爆料频道</h4>
+        <ul>
+          <li><a href="/#hot">热门爆料</a></li>
+          <li><a href="/#latest">最新动态</a></li>
+          <li><a href="/#cats">分类入口</a></li>
+          <li><a href="/#rel">相关推荐</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>深度与答疑</h4>
+        <ul>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问答</a></li>
+          <li><a href="/#trend">趋势观察</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>互动与资讯</h4>
+        <ul>
+          <li><a href="/#cmt">读者评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#intro">内容简介</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2025 每日大赛爆料黑料</span>
+      <span class="dot">·</span>
+      <span>部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('siteSearch');
+  var grid = document.getElementById('hotGrid');
+  var noRes = document.getElementById('noResult');
+  if(!input || !grid) return;
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.card'));
+  cards.forEach(function(c){
+    c.dataset.text = c.textContent.replace(/\s+/g,'').toLowerCase();
+  });
+  input.addEventListener('input', function(){
+    var q = input.value.trim().toLowerCase().replace(/\s+/g,'');
+    var shown = 0;
+    cards.forEach(function(c){
+      var hit = !q || c.dataset.text.indexOf(q) !== -1;
+      c.classList.toggle('hidden', !hit);
+      if(hit) shown++;
+    });
+    noRes.classList.toggle('show', shown === 0);
+  });
+})();
+</script>
+</body>
+                                                                           </html>
