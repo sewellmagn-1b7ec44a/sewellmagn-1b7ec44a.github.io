@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每日黑料-网络热门事件_争议话题_圈内动态</title>
+  <meta name="description" content="每日黑料追踪网络热门事件与争议话题，整理圈内动态、网友讨论和事件脉络，适合关注网络舆论与内容生态的读者快速浏览。">
+  <meta name="keywords" content="网络热门事件,争议话题,圈内动态,网友讨论,事件追踪">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231d2b3a'/%3E%3Cpath d='M8 20l4-9 4 6 3-4 5 7H8z' fill='%23f0c75e'/%3E%3Ccircle cx='23' cy='9' r='3' fill='%23e86a5e'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --bg: #f5f2ed;
+      --panel: #ffffff;
+      --ink: #1d2b3a;
+      --ink-soft: #4e5e6f;
+      --muted: #7a8794;
+      --line: #e2ddd6;
+      --accent: #c74b3a;
+      --accent-soft: #f7e7e3;
+      --gold: #b8860b;
+      --gold-soft: #f7efd8;
+      --navy: #23384d;
+      --radius: 12px;
+      --radius-s: 8px;
+      --shadow: 0 1px 3px rgba(29,43,58,.06), 0 6px 18px rgba(29,43,58,.05);
+      --max: 1360px;
+      --announce-h: 36px;
+      --header-h: 64px;
+      --sticky-offset: calc(var(--announce-h) + var(--header-h) + 12px);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+    img, svg { max-width: 100%; }
+    button, input { font: inherit; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    .announce-bar {
+      position: sticky; top: 0; z-index: 50;
+      height: var(--announce-h);
+      background: var(--navy);
+      color: #f2e7ce;
+      font-size: 13px;
+      display: flex; align-items: center;
+      letter-spacing: .3px;
+      overflow: hidden;
+    }
+    .announce-bar .wrap { display: flex; align-items: center; gap: 12px; width: 100%; }
+    .announce-bar strong { color: #f0c75e; font-weight: 600; white-space: nowrap; }
+    .announce-bar span { opacity: .9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .site-header {
+      position: sticky; top: var(--announce-h); z-index: 49;
+      height: var(--header-h);
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .site-header .wrap {
+      height: 100%;
+      display: flex; align-items: center; gap: 22px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: 21px; letter-spacing: .5px;
+      color: var(--ink); white-space: nowrap;
+    }
+    .brand svg { width: 32px; height: 32px; flex: none; }
+    .brand .logo-text { color: var(--ink); }
+    .main-nav {
+      display: flex; align-items: center; gap: 4px;
+      margin-left: 6px; flex-wrap: wrap;
+    }
+    .main-nav a {
+      padding: 6px 11px; border-radius: 999px; font-size: 14px; color: var(--ink-soft);
+      white-space: nowrap;
+    }
+    .main-nav a:hover { background: var(--accent-soft); color: var(--accent); }
+    .header-actions {
+      margin-left: auto; display: flex; align-items: center; gap: 10px;
+    }
+    .search-box {
+      display: flex; align-items: center;
+      background: var(--bg); border: 1px solid var(--line);
+      border-radius: 999px; padding: 3px 4px 3px 12px;
+    }
+    .search-box input {
+      border: 0; background: transparent; outline: none;
+      width: 130px; font-size: 13px; color: var(--ink);
+    }
+    .search-box button {
+      border: 0; background: var(--navy); color: #fff;
+      border-radius: 999px; padding: 4px 12px; font-size: 13px; cursor: pointer;
+    }
+    .search-box button:focus-visible, .main-nav a:focus-visible, .side-nav a:focus-visible, .btn:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 2px;
+    }
+    .hero {
+      background:
+        radial-gradient(1200px 400px at 85% -10%, rgba(184,134,11,.16), transparent 60%),
+        linear-gradient(180deg, #fffdf9 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--line);
+      padding: 38px 0 34px;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.25fr .75fr;
+      gap: 36px; align-items: center;
+    }
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--accent); background: var(--accent-soft);
+      border-radius: 999px; padding: 3px 12px; font-weight: 600;
+      letter-spacing: .5px;
+    }
+    h1 {
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.2; margin: 14px 0 12px;
+      letter-spacing: 1px; color: var(--ink);
+    }
+    .hero-desc {
+      font-size: 16px; color: var(--ink-soft); max-width: 580px;
+      margin: 0 0 20px;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 9px 18px; border-radius: 999px; font-size: 14px;
+      border: 1px solid var(--line); background: #fff; cursor: pointer;
+    }
+    .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn-primary:hover { color: #fff; background: #ad3e2f; }
+    .hero-visual {
+      background: var(--panel); border: 1px solid var(--line);
+      border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: 18px; position: relative; overflow: hidden;
+    }
+    .hero-visual svg { width: 100%; height: auto; display: block; }
+    .hero-visual .tag-cloud {
+      display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px;
+    }
+    .tag {
+      font-size: 12px; padding: 2px 9px; border-radius: 999px;
+      background: var(--gold-soft); color: #7a5a0a; border: 1px solid #ead9a9;
+      white-space: nowrap;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 176px minmax(0, 1fr) 242px;
+      gap: 26px;
+      align-items: start;
+      padding: 30px 0 40px;
+    }
+    .side-nav {
+      position: sticky; top: var(--sticky-offset);
+      background: var(--panel); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 14px 10px;
+      box-shadow: var(--shadow);
+    }
+    .side-nav h2 {
+      font-size: 13px; letter-spacing: 1px; color: var(--muted);
+      margin: 0 0 8px; padding: 0 8px; font-weight: 600;
+    }
+    .side-nav ul { list-style: none; margin: 0; padding: 0; }
+    .side-nav li a {
+      display: block; padding: 6px 9px; border-radius: var(--radius-s);
+      font-size: 14px; color: var(--ink-soft); line-height: 1.4;
+    }
+    .side-nav li a:hover { background: var(--accent-soft); color: var(--accent); }
+    .side-nav .group { margin-top: 12px; padding-top: 8px; border-top: 1px dashed var(--line); }
+    .main-col { min-width: 0; }
+    .right-col { position: sticky; top: var(--sticky-offset); display: grid; gap: 18px; }
+    .panel {
+      background: var(--panel); border: 1px solid var(--line);
+      border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: 20px;
+    }
+    .panel + .panel { margin-top: 18px; }
+    .panel-title {
+      display: flex; align-items: baseline; justify-content: space-between; gap: 10px;
+      margin: 0 0 14px; font-size: 18px; font-weight: 700; letter-spacing: .3px;
+    }
+    .panel-title small { font-size: 12px; color: var(--muted); font-weight: 400; }
+    .section-anchor { scroll-margin-top: var(--sticky-offset); }
+    .intro-text p { margin: 0 0 12px; color: var(--ink-soft); }
+    .intro-text strong { color: var(--ink); }
+    .card-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+    }
+    .card {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius-s);
+      padding: 14px; display: flex; flex-direction: column; gap: 8px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .card:hover { border-color: #d7c6b0; box-shadow: 0 4px 14px rgba(29,43,58,.07); }
+    .card h3 { margin: 0; font-size: 15px; line-height: 1.4; }
+    .card h3 a { color: var(--ink); }
+    .card h3 a:hover { color: var(--accent); }
+    .card .meta { display: flex; flex-wrap: wrap; gap: 5px; }
+    .card .desc { font-size: 13px; color: var(--ink-soft); margin: 0; line-height: 1.6; }
+    .card .stats { font-size: 12px; color: var(--muted); display: flex; gap: 10px; margin-top: auto; }
+    .list-updates { list-style: none; margin: 0; padding: 0; }
+    .list-updates li {
+      display: flex; gap: 12px; padding: 9px 0; border-bottom: 1px dashed var(--line);
+      font-size: 14px; align-items: baseline;
+    }
+    .list-updates li:last-child { border-bottom: 0; }
+    .list-updates .date { color: var(--muted); font-size: 12px; white-space: nowrap; min-width: 42px; }
+    .list-updates a { color: var(--ink); font-weight: 500; }
+    .list-updates .summary { color: var(--ink-soft); font-size: 13px; }
+    .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .cat-item {
+      display: flex; flex-direction: column; gap: 3px;
+      border: 1px solid var(--line); border-radius: var(--radius-s);
+      padding: 10px 12px; background: #fff; font-size: 14px;
+    }
+    .cat-item:hover { border-color: var(--accent); }
+    .cat-item strong { font-size: 14px; color: var(--ink); }
+    .cat-item span { font-size: 12px; color: var(--muted); }
+    .deep h3 { margin: 18px 0 8px; font-size: 17px; }
+    .deep h3:first-of-type { margin-top: 0; }
+    .deep p { margin: 0 0 10px; color: var(--ink-soft); }
+    .deep ul, .deep ol { margin: 6px 0 12px; padding-left: 22px; color: var(--ink-soft); }
+    .deep li { margin-bottom: 4px; }
+    .faq details {
+      border: 1px solid var(--line); border-radius: var(--radius-s);
+      padding: 10px 14px; background: #fff; margin-bottom: 10px;
+    }
+    .faq summary {
+      cursor: pointer; font-weight: 600; font-size: 14px; color: var(--ink);
+      list-style: none; display: flex; justify-content: space-between; gap: 10px;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "＋"; color: var(--accent); font-weight: 400; }
+    .faq details[open] summary::after { content: "－"; }
+    .faq details p { margin: 10px 0 0; color: var(--ink-soft); font-size: 14px; }
+    .comments { display: grid; gap: 10px; }
+    .comment {
+      display: flex; gap: 10px; border-bottom: 1px dashed var(--line);
+      padding-bottom: 9px; font-size: 14px;
+    }
+    .comment:last-child { border-bottom: 0; }
+    .avatar {
+      width: 32px; height: 32px; flex: none; border-radius: 50%;
+      background: var(--gold-soft); color: #7a5a0a;
+      display: grid; place-items: center; font-weight: 700; font-size: 13px;
+    }
+    .comment .name { font-weight: 600; font-size: 13px; color: var(--ink); }
+    .comment p { margin: 2px 0 0; color: var(--ink-soft); font-size: 13.5px; line-height: 1.6; }
+    .news-list { display: grid; gap: 12px; }
+    .news-item { border-left: 3px solid var(--gold); padding-left: 12px; }
+    .news-item h3 { margin: 0 0 3px; font-size: 15px; }
+    .news-item .date { font-size: 12px; color: var(--muted); }
+    .news-item p { margin: 4px 0 0; font-size: 13px; color: var(--ink-soft); }
+    .tag-index { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag-index a {
+      display: inline-block; font-size: 13px; padding: 4px 12px;
+      border-radius: 999px; background: #fbf7ee; border: 1px solid #e8ddc6;
+      color: #6b5316;
+    }
+    .tag-index a:hover { background: var(--gold-soft); }
+    .quote-card {
+      background: linear-gradient(135deg, #fdf9f0, #f7efe0);
+      border: 1px solid #ead9b8; border-radius: var(--radius); padding: 18px;
+      font-size: 14px; color: #5d4b22;
+    }
+    .quote-card p { margin: 0 0 8px; }
+    .toc {
+      list-style: none; margin: 0; padding: 0;
+      display: grid; gap: 3px; font-size: 13.5px;
+    }
+    .toc a { display: block; padding: 4px 6px; border-radius: 6px; color: var(--ink-soft); }
+    .toc a:hover { background: var(--accent-soft); color: var(--accent); }
+    .side-hot { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+    .side-hot li { display: flex; gap: 8px; font-size: 13.5px; align-items: baseline; }
+    .side-hot .rank {
+      width: 18px; height: 18px; flex: none; border-radius: 4px;
+      background: var(--navy); color: #f0c75e; font-size: 11px;
+      display: grid; place-items: center; font-weight: 700;
+    }
+    .side-hot li:nth-child(-n+3) .rank { background: var(--accent); color: #fff; }
+    .site-footer {
+      background: var(--navy); color: #cdd6df; margin-top: 20px;
+      padding: 36px 0 22px; font-size: 13.5px;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 26px;
+    }
+    .site-footer h3 { color: #f2e7ce; font-size: 14px; margin: 0 0 10px; letter-spacing: .5px; }
+    .site-footer a { color: #cdd6df; }
+    .site-footer a:hover { color: #f0c75e; }
+    .footer-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+    .footer-note {
+      border-top: 1px solid rgba(255,255,255,.12); margin-top: 24px; padding-top: 16px;
+      font-size: 12px; color: #9aa8b5; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px;
+    }
+    .mobile-menu-toggle { display: none; }
+    @media (max-width: 1080px) {
+      .layout { grid-template-columns: 1fr 240px; }
+      .side-nav { position: static; order: 2; }
+      .main-col { order: 1; }
+      .right-col { position: static; order: 3; grid-column: 1 / -1; grid-template-columns: 1fr 1fr; }
+      .hero-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 820px) {
+      .layout { grid-template-columns: 1fr; gap: 18px; }
+      .right-col { grid-template-columns: 1fr; }
+      .main-nav { display: none; }
+      .mobile-menu-toggle {
+        display: inline-flex; align-items: center; gap: 4px;
+        border: 1px solid var(--line); background: #fff; border-radius: 999px;
+        padding: 5px 12px; font-size: 13px; cursor: pointer;
+      }
+      .card-grid { grid-template-columns: repeat(2, 1fr); }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .search-box input { width: 90px; }
+    }
+    @media (max-width: 520px) {
+      .card-grid { grid-template-columns: 1fr; }
+      .cat-grid { grid-template-columns: 1fr 1fr; }
+      .brand { font-size: 18px; }
+      .brand svg { width: 28px; height: 28px; }
+      .hero { padding: 28px 0 24px; }
+      .panel { padding: 16px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .announce-bar span { max-width: 190px; }
+      .search-box { display: none; }
+    }
+    .visually-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+    .no-results { padding: 16px; background: var(--gold-soft); border-radius: var(--radius-s); color: #6b5316; font-size: 14px; display: none; }
+  </style>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce-bar" role="region" aria-label="站内公告">
+  <div class="wrap">
+    <strong>今日速报</strong>
+    <span>新增「圈内动态」追踪 12 条 · 争议话题讨论热度上升 · 每周三更新事件脉络</span>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="每日黑料首页">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="32" height="32" rx="7" fill="#23384d"/>
+        <path d="M7 21l4.5-10 4.5 6.5 3-4L27 21H7z" fill="#f0c75e"/>
+        <circle cx="24" cy="9" r="3.2" fill="#c74b3a"/>
+      </svg>
+      <span class="logo-text">每日黑料</span>
+    </a>
+    <nav class="main-nav" aria-label="主题导航">
+      <a href="/#hot">热门事件</a>
+      <a href="/#updates">最新动态</a>
+      <a href="/#categories">分类索引</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">网友评论</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box" role="search">
+        <label for="site-search" class="visually-hidden">搜索站内内容</label>
+        <input id="site-search" type="search" placeholder="搜索话题 / 事件…" autocomplete="off">
+        <button type="button" id="search-btn">查找</button>
+      </div>
+      <button class="mobile-menu-toggle" type="button" aria-label="展开频道导航" aria-expanded="false" id="mobile-menu-toggle">频道</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- 主题首屏 -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-kicker">网络内容观察站</span>
+        <h1 id="hero-title">每日黑料</h1>
+        <p class="hero-desc">追踪网络热门事件与争议话题，整理圈内动态、网友讨论和事件脉络。每天花几分钟，看清内容背后的来龙去脉。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/#hot">浏览今日热门事件</a>
+          <a class="btn" href="/#updates">查看最新动态</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 420 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="话题脉络示意图">
+          <rect x="0" y="0" width="420" height="190" rx="12" fill="#fbf8f1"/>
+          <path d="M30 150c40-30 70-10 110-40s80-60 120-50 50 30 80 10" fill="none" stroke="#c74b3a" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+          <circle cx="80" cy="120" r="22" fill="#f0c75e" opacity=".8"/>
+          <circle cx="180" cy="100" r="16" fill="#e86a5e" opacity=".8"/>
+          <circle cx="290" cy="70" r="24" fill="#23384d" opacity=".85"/>
+          <circle cx="360" cy="90" r="12" fill="#b8860b" opacity=".8"/>
+          <text x="58" y="125" font-size="11" fill="#23384d" font-family="sans-serif">热议</text>
+          <text x="164" y="105" font-size="11" fill="#fff" font-family="sans-serif">跟进</text>
+          <text x="268" y="75" font-size="11" fill="#f0c75e" font-family="sans-serif">脉络</text>
+          <text x="346" y="94" font-size="9" fill="#fff" font-family="sans-serif">讨论</text>
+        </svg>
+        <div class="tag-cloud">
+          <span class="tag">网络热门事件</span>
+          <span class="tag">争议话题</span>
+          <span class="tag">圈内动态</span>
+          <span class="tag">网友讨论</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <!-- 左栏：频道导航 + 分类索引 -->
+    <aside class="side-nav" aria-label="频道与分类索引">
+      <h2>频道导航</h2>
+      <ul>
+        <li><a href="/#hot">热门事件</a></li>
+        <li><a href="/#updates">最新动态</a></li>
+        <li><a href="/#categories">分类索引</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">网友评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#related">相关推荐</a></li>
+        <li><a href="/#timeline">讨论时间线</a></li>
+      </ul>
+      <div class="group">
+        <h2>分类筛选</h2>
+        <ul>
+          <li><a href="/#categories">娱乐争议</a></li>
+          <li><a href="/#categories">社交热点</a></li>
+          <li><a href="/#categories">内容翻车</a></li>
+          <li><a href="/#categories">商业纠纷</a></li>
+          <li><a href="/#categories">直播动态</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- 中栏：主内容 -->
+    <div class="main-col">
+
+      <!-- 1. 内容简介 -->
+      <section class="panel section-anchor" id="intro" aria-labelledby="intro-title">
+        <h2 class="panel-title" id="intro-title">内容简介 <small>关于这个内容站</small></h2>
+        <div class="intro-text">
+          <p><strong>每日黑料</strong>是一个聚焦网络热门事件与争议话题的内容整理站。这里不生产爆料，而是把分散在社交平台、讨论区和评论区里的公开信息按事件脉络重新梳理，帮助读者在信息过载的环境中快速抓住重点。每天更新圈内动态，覆盖娱乐争议、社交热点、内容翻车、商业纠纷和直播动态等方向。</p>
+          <p>如果你习惯在睡前刷一圈热门事件，或者通勤路上想了解昨天又发生了什么争议话题，这里的内容按“事件—进展—讨论”三段式组织，几分钟就能读完一条脉络。我们不追求站队，更关注事件如何发酵、各方如何回应、网友讨论集中在哪些角度。</p>
+          <p>站内内容分为热门事件推荐、最新动态、分类索引、深度解析、常见问题、网友评论和相关资讯几个部分。每个板块承担不同的阅读需求：想快速浏览看热门和更新，想理解背景看深度解析，想了解讨论风向看评论和 FAQ。所有条目均标注示例性的热度、更新时间和讨论量，方便你判断是否需要展开阅读。</p>
+          <p>对于关注内容生态的读者，这里也适合当作日常的“网络舆论观察笔记”——争议话题为什么引发共鸣、内容翻车通常踩了哪些线、商业纠纷中哪些信息值得交叉验证，都会在深度解析和体验指南中展开说明。</p>
+        </div>
+      </section>
+
+      <!-- 2. 热门内容推荐 -->
+      <section class="panel section-anchor" id="hot" aria-labelledby="hot-title">
+        <h2 class="panel-title" id="hot-title">热门事件推荐 <small>按讨论热度整理</small></h2>
+        <div class="card-grid" id="hot-grid">
+          <article class="card" data-search="某综艺剪辑争议 娱乐争议 剪辑争议 网友讨论">
+            <h3><a href="/#deep">某综艺剪辑争议持续发酵</a></h3>
+            <div class="meta"><span class="tag">娱乐争议</span><span class="tag">剪辑争议</span><span class="tag">网友讨论</span></div>
+            <p class="desc">节目正片与花絮内容不一致，引发观众对剪辑逻辑的讨论，相关片段在社交平台被反复对比。</p>
+            <div class="stats"><span>热度 9.2</span><span>更新 2 小时前</span></div>
+          </article>
+          <article class="card" data-search="品牌联名翻车 商业纠纷 联名争议 内容翻车">
+            <h3><a href="/#deep">品牌联名文案被指冒犯</a></h3>
+            <div class="meta"><span class="tag">商业纠纷</span><span class="tag">联名争议</span><span class="tag">内容翻车</span></div>
+            <p class="desc">联名活动宣传语在多个平台引发讨论，品牌方已撤下相关物料，网友对其审核流程提出疑问。</p>
+            <div class="stats"><span>热度 8.7</span><span>更新 5 小时前</span></div>
+          </article>
+          <article class="card" data-search="直播切片断章取义 直播动态 切片争议 圈内动态">
+            <h3><a href="/#updates">直播切片被指断章取义</a></h3>
+            <div class="meta"><span class="tag">直播动态</span><span class="tag">切片争议</span><span class="tag">圈内动态</span></div>
+            <p class="desc">一段十几秒的直播切片在群聊中传播，完整回放显示语境不同，讨论焦点转向切片传播的边界。</p>
+            <div class="stats"><span>热度 8.4</span><span>更新 7 小时前</span></div>
+          </article>
+          <article class="card" data-search="社交平台算法推荐 社交热点 算法讨论 热门事件">
+            <h3><a href="/#deep">社交平台算法推荐再引讨论</a></h3>
+            <div class="meta"><span class="tag">社交热点</span><span class="tag">算法讨论</span><span class="tag">热门事件</span></div>
+            <p class="desc">同一条内容在不同账号首页出现频率差异明显，网友晒出对比截图，讨论推荐机制是否透明。</p>
+            <div class="stats"><span>热度 8.1</span><span>更新 9 小时前</span></div>
+          </article>
+          <article class="card" data-search="短剧内容下架 内容翻车 短剧争议 圈内动态">
+            <h3><a href="/#updates">短剧内容下架引发猜测</a></h3>
+            <div class="meta"><span class="tag">内容翻车</span><span class="tag">短剧争议</span><span class="tag">圈内动态</span></div>
+            <p class="desc">多部短剧在平台检索不到，制作方未公开说明原因，观众在讨论区整理时间线和可能的调整方向。</p>
+            <div class="stats"><span>热度 7.8</span><span>更新 11 小时前</span></div>
+          </article>
+          <article class="card" data-search="博主道歉声明 争议话题 道歉争议 网友讨论">
+            <h3><a href="/#news">博主道歉声明被逐句分析</a></h3>
+            <div class="meta"><span class="tag">争议话题</span><span class="tag">道歉争议</span><span class="tag">网友讨论</span></div>
+            <p class="desc">道歉长文发布后，网友对其中的措辞、时间线和责任归属展开逐句讨论，部分表述被指避重就轻。</p>
+            <div class="stats"><span>热度 7.5</span><span>更新 13 小时前</span></div>
+          </article>
+        </div>
+        <p class="no-results" id="hot-no-results">没有找到匹配的内容，试试更短的关键词，比如“争议”或“直播”。</p>
+      </section>
+
+      <!-- 3. 最新更新 -->
+      <section class="panel section-anchor" id="updates" aria-labelledby="updates-title">
+        <h2 class="panel-title" id="updates-title">最新动态 <small>近 24 小时更新</small></h2>
+        <ul class="list-updates">
+          <li><span class="date">09:40</span><div><a href="/#deep">综艺剪辑争议新增回应</a> <span class="summary">节目组发布简短说明，网友继续对比花絮片段。</span></div></li>
+          <li><span class="date">09:05</span><div><a href="/#hot">品牌联名物料撤下</a> <span class="summary">多个平台已无法检索到争议文案，讨论转向审核机制。</span></div></li>
+          <li><span class="date">08:30</span><div><a href="/#updates">直播切片完整回放流出</a> <span class="summary">回放显示前后语境差异，切片传播边界成为新话题。</span></div></li>
+          <li><span class="date">08:00</span><div><a href="/#news">短剧下架讨论热度回落</a> <span class="summary">制作方保持沉默，观众整理出可能受影响的剧集清单。</span></div></li>
+          <li><span class="date">07:20</span><div><a href="/#comments">道歉声明衍生二创传播</a> <span class="summary">网友用截图和批注方式逐段解读，评论区观点分化。</span></div></li>
+          <li><span class="date">昨日 23:10</span><div><a href="/#deep">算法推荐对比截图扩散</a> <span class="summary">不同设备首页差异被整理成表格，讨论集中在透明度。</span></div></li>
+          <li><span class="date">昨日 22:35</span><div><a href="/#updates">内容创作者删稿引发猜测</a> <span class="summary">多篇旧文被删除，读者在讨论区询问原因和后续。</span></div></li>
+          <li><span class="date">昨日 21:50</span><div><a href="/#related">争议话题标签索引更新</a> <span class="summary">新增“联名争议”“切片传播”等具体方向标签。</span></div></li>
+        </ul>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="panel section-anchor" id="categories" aria-labelledby="categories-title">
+        <h2 class="panel-title" id="categories-title">分类索引 <small>按垂类方向查找</small></h2>
+        <div class="cat-grid">
+          <a class="cat-item" href="/#hot"><strong>娱乐争议</strong><span>综艺、剧集、艺人相关讨论</span></a>
+          <a class="cat-item" href="/#hot"><strong>社交热点</strong><span>平台话题、算法与传播现象</span></a>
+          <a class="cat-item" href="/#updates"><strong>内容翻车</strong><span>文案、剪辑、审核争议</span></a>
+          <a class="cat-item" href="/#updates"><strong>商业纠纷</strong><span>联名、合作与品牌回应</span></a>
+          <a class="cat-item" href="/#hot"><strong>直播动态</strong><span>切片、回放与实时讨论</span></a>
+          <a class="cat-item" href="/#news"><strong>道歉与回应</strong><span>声明措辞与舆论反馈</span></a>
+          <a class="cat-item" href="/#deep"><strong>事件脉络</strong><span>时间线整理与背景补充</span></a>
+          <a class="cat-item" href="/#related"><strong>讨论风向</strong><span>评论区观点与话题标签</span></a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析正文 -->
+      <section class="panel section-anchor deep" id="deep" aria-labelledby="deep-title">
+        <h2 class="panel-title" id="deep-title">深度解析 <small>争议话题如何发酵</small></h2>
+        <p>一条内容从发布到成为热门事件，中间往往经过几个可观察的阶段。理解这些阶段，比单纯追逐结果更有助于判断信息价值。以下从内容翻车、讨论扩散和回应节奏三个角度展开，结合近期圈内动态做具体说明。</p>
+
+        <h3>内容翻车的常见触发点</h3>
+        <p>争议话题的起点通常并不复杂：一句文案、一段剪辑、一个切片，在特定语境下被放大。从近期热门事件来看，触发点集中在三类。</p>
+        <ul>
+          <li><strong>表达错位：</strong>宣传语或标题在脱离上下文后产生歧义，读者按字面理解后感到被冒犯。</li>
+          <li><strong>剪辑选择：</strong>节目或视频在有限时长内取舍素材，未呈现的上下文成为讨论焦点。</li>
+          <li><strong>传播变形：</strong>直播切片或聊天记录被截取传播，完整回放与切片内容存在明显差异。</li>
+        </ul>
+        <p>这三类的共同点是：信息在传播链路上被压缩。读者看到的是压缩后的版本，而争议往往围绕“完整版本到底是什么”展开。每日黑料在整理这类网络热门事件时，会优先标注信息完整度，区分“已确认”“单方说法”和“待核实”，避免把压缩版本当成定论。</p>
+
+        <h3>讨论扩散的路径与节点</h3>
+        <p>争议话题扩散通常经过“小范围截图—社群讨论—平台热搜—媒体跟进”的路径。每一步的讨论重点会发生变化：截图阶段关注事实，社群阶段关注立场，热搜阶段关注情绪，媒体阶段关注责任。网友讨论在第二和第三阶段最容易分化，因为参与者的信息来源不同。</p>
+        <p>以品牌联名争议为例，早期讨论集中在文案本身，随后转向审核流程，再后来出现对品牌过往内容的翻查。这种扩散不是线性的，而是多线程并行。每日黑料在梳理圈内动态时，会把不同线程分开呈现，避免把背景讨论和核心事实混在一起。读者如果只想了解事件主线，可以只看时间线；如果想看讨论风向，可以跳到评论和标签索引。</p>
+
+        <h3>回应节奏与信息可信度</h3>
+        <p>争议出现后的回应节奏，直接影响讨论走向。观察近期案例，回应大致分为三种：快速简短回应、延迟详细说明、以及不作公开回应。快速回应能压缩猜测空间，但如果措辞含糊，反而会引发第二轮逐句分析；延迟说明需要足够具体，否则容易被认为避重就轻；不回应则会让讨论转向其他渠道，信息完整度更难保证。</p>
+        <p>对于关注内容生态的读者，判断信息可信度可以从三个维度入手：是否有可交叉验证的原始素材、回应方是否承认具体事实、讨论中是否出现明显的事实错误。每日黑料在深度解析和 FAQ 中反复强调这三点，不是为了给出结论，而是提供可复用的判断方法。争议话题的价值不在于站队，而在于看清信息如何流动、哪些环节容易失真。</p>
+
+        <h3>如何高效跟进一条脉络</h3>
+        <ol>
+          <li>先看最新动态，确认事件当前处于哪个阶段。</li>
+          <li>再看分类索引，找到对应垂类的背景说明。</li>
+          <li>阅读深度解析中的触发点和扩散路径，建立框架。</li>
+          <li>最后浏览网友评论和 FAQ，了解讨论中的常见疑问。</li>
+        </ol>
+        <p>这套顺序适合睡前刷一遍或通勤路上快速浏览。每日黑料不追求覆盖所有细节，而是把有限篇幅放在事件脉络和可验证信息上，帮助读者在碎片化讨论中保持自己的判断。</p>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="panel section-anchor" id="guide" aria-labelledby="guide-title">
+        <h2 class="panel-title" id="guide-title">体验指南 <small>怎么用这个站</small></h2>
+        <p>站内结构按阅读深度分层，你可以根据时间多少选择入口。首页从上到下依次是：公告条、频道导航、首屏概述、热门事件卡片、最新动态列表、分类索引、深度解析、体验指南、常见问题、网友评论、相关资讯和相关推荐。左栏是频道与分类索引，右栏是页内目录、热门条目和延伸阅读。</p>
+        <ul>
+          <li><strong>快速浏览：</strong>看热门事件卡片和最新动态列表，每条都有 40—80 字看点，适合几分钟内了解今天发生了什么。</li>
+          <li><strong>分类查找：</strong>点击分类索引中的具体方向词，如“娱乐争议”“内容翻车”，页面会定位到对应板块，方便按兴趣筛选。</li>
+          <li><strong>深度跟进：</strong>深度解析按触发点、扩散路径和回应节奏展开，适合想理解事件逻辑的读者。</li>
+          <li><strong>搜索与筛选：</strong>页头搜索框支持本地内容查找，输入关键词后会过滤热门事件卡片并显示无结果提示。</li>
+          <li><strong>移动端：</strong>窄屏下频道导航收进“频道”按钮，左右栏内容依次排列在主内容之后，阅读顺序保持清晰。</li>
+        </ul>
+        <p>如果你关注某类争议话题，可以先从相关推荐标签进入，再回到深度解析看背景。追更型读者可以留意最新动态的时间标记，每天更新节奏集中在上午和晚间两个时段。</p>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="panel section-anchor faq" id="faq" aria-labelledby="faq-title">
+        <h2 class="panel-title" id="faq-title">常见问题 <small>读者常问的 6 个问题</small></h2>
+        <details>
+          <summary>每日黑料适合什么人看？</summary>
+          <p>适合关注网络热门事件、争议话题和圈内动态的读者，尤其是希望在短时间内了解事件脉络、不想被单一截图带偏的人。内容偏信息整理，不要求读者有特定背景。</p>
+        </details>
+        <details>
+          <summary>网络热门事件一般多久更新一次？</summary>
+          <p>站内最新动态每天更新，热门事件卡片按讨论热度滚动调整，深度解析和分类索引通常每周补充一次。遇到快速发酵的话题，会在当天增加跟进条目。</p>
+        </details>
+        <details>
+          <summary>内容和“爆料”有什么区别？</summary>
+          <p>这里主要整理公开可见的信息，标注来源线索和完整度，不发布未经核实的私下材料。争议话题的呈现以“发生了什么、各方怎么回应、讨论集中在哪”为主，不替代读者自己的判断。</p>
+        </details>
+        <details>
+          <summary>为什么同一条内容在不同平台热度不一样？</summary>
+          <p>推荐机制、用户结构和讨论习惯不同，会导致同一事件在不同平台呈现不同热度。站内会尽量区分“平台热”和“跨平台热”，在最新动态中标注讨论主要集中的渠道。</p>
+        </details>
+        <details>
+          <summary>遇到内容翻车类事件，应该先看哪部分？</summary>
+          <p>建议先看深度解析中的“常见触发点”，再回到最新动态确认当前进展。如果涉及道歉或回应，可以结合网友评论中的不同观点，避免只看单条高赞评论。</p>
+        </details>
+        <details>
+          <summary>站内搜索能搜到什么？</summary>
+          <p>搜索框对热门事件卡片的标题、标签和看点做本地匹配，输入具体词如“剪辑”“联名”“直播”可以直接过滤。如果没有匹配结果，会提示换用更短的关键词。</p>
+        </details>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="panel section-anchor" id="comments" aria-labelledby="comments-title">
+        <h2 class="panel-title" id="comments-title">网友评论 <small>观点仅代表示例昵称</small></h2>
+        <div class="comments">
+          <div class="comment"><div class="avatar">柠檬</div><div><span class="name">柠檬不酸</span><p>剪辑争议那个对比太明显了，正片和花絮确实像两个语境。</p></div></div>
+          <div class="comment"><div class="avatar">老周</div><div><span class="name">老周看热闹</span><p>品牌联名文案我第一眼没觉得有问题，看了讨论才意识到可以这样理解。</p></div></div>
+          <div class="comment"><div class="avatar">小满</div><div><span class="name">小满同学</span><p>切片传播这个话题值得单开一篇，十几秒真的很容易断章取义。</p></div></div>
+          <div class="comment"><div class="avatar">阿吉</div><div><span class="name">阿吉不熬夜</span><p>每日黑料这种按时间线整理的方式比较省时间，不用翻来翻去。</p></div></div>
+          <div class="comment"><div class="avatar">茶茶</div><div><span class="name">茶茶乌龙</span><p>道歉声明逐句分析有点狠，但确实很多表述经不起细看。</p></div></div>
+          <div class="comment"><div class="avatar">大熊</div><div><span class="name">大熊慢慢走</span><p>算法推荐那个对比截图我也刷到了，不同账号首页差别挺大。</p></div></div>
+          <div class="comment"><div class="avatar">青柠</div><div><span class="name">青柠气泡</span><p>短剧下架的原因到现在也没个准话，讨论区猜什么的都有。</p></div></div>
+          <div class="comment"><div class="avatar">老白</div><div><span class="name">老白不喝酒</span><p>分类索引里“内容翻车”和“商业纠纷”分得挺清楚，找起来方便。</p></div></div>
+          <div class="comment"><div class="avatar">小鹿</div><div><span class="name">小鹿乱撞</span><p>希望多更新一点直播动态，切片相关的讨论最近特别多。</p></div></div>
+          <div class="comment"><div class="avatar">阿橙</div><div><span class="name">阿橙子</span><p>深度解析那段“回应节奏”总结得挺好，快回应和慢回应效果完全不同。</p></div></div>
+          <div class="comment"><div class="avatar">豆子</div><div><span class="name">豆子开花</span><p>有些争议看多了会觉得累，这里至少把事实和讨论分开了。</p></div></div>
+          <div class="comment"><div class="avatar">南风</div><div><span class="name">南风知我意</span><p>搜索框挺实用，输入“联名”直接筛出相关卡片，不用翻整页。</p></div></div>
+          <div class="comment"><div class="avatar">米粒</div><div><span class="name">米粒儿</span><p>中立地说，有些事件信息确实不全，标注“待核实”比直接下结论好。</p></div></div>
+          <div class="comment"><div class="avatar">阿凯</div><div><span class="name">阿凯日记</span><p>每周三更新脉络这个节奏可以，适合我这种隔几天集中看一次的人。</p></div></div>
+          <div class="comment"><div class="avatar">小圆</div><div><span class="name">小圆脸</span><p>评论区比正文还热闹，不过这里摘的评论还算克制。</p></div></div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="panel section-anchor" id="news" aria-labelledby="news-title">
+        <h2 class="panel-title" id="news-title">相关资讯 <small>近期内容动态</small></h2>
+        <div class="news-list">
+          <article class="news-item">
+            <h3>平台更新社区规范，争议内容标注要求细化</h3>
+            <span class="date">2025-03-18</span>
+            <p>新规对争议话题的上下文说明提出更具体要求，内容整理类页面需明确标注信息完整度。</p>
+          </article>
+          <article class="news-item">
+            <h3>联名争议后品牌方调整审核流程</h3>
+            <span class="date">2025-03-17</span>
+            <p>多个品牌在联名物料上线前增加多轮语义审查，业内人士称“翻车成本明显上升”。</p>
+          </article>
+          <article class="news-item">
+            <h3>直播切片传播边界引发内容创作者讨论</h3>
+            <span class="date">2025-03-16</span>
+            <p>创作者围绕切片授权、断章取义和二次传播展开讨论，部分主播开始设置切片规范。</p>
+          </article>
+          <article class="news-item">
+            <h3>短剧内容检索调整，观众整理受影响清单</h3>
+            <span class="date">2025-03-15</span>
+            <p>多部短剧在平台检索结果变化，制作方未公开说明，观众自发整理时间线和清单。</p>
+          </article>
+          <article class="news-item">
+            <h3>算法推荐透明度讨论升温，网友晒对比截图</h3>
+            <span class="date">2025-03-14</span>
+            <p>不同账号首页内容差异引发对推荐机制的讨论，部分用户呼吁提供更清晰的推荐说明。</p>
+          </article>
+          <article class="news-item">
+            <h3>内容翻车案例复盘：文案审核的常见盲区</h3>
+            <span class="date">2025-03-13</span>
+            <p>近期多起争议指向文案审核环节，行业讨论集中在多义表达和跨平台语境差异。</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="panel section-anchor" id="related" aria-labelledby="related-title">
+        <h2 class="panel-title" id="related-title">相关推荐 <small>按具体方向延伸</small></h2>
+        <div class="tag-index">
+          <a href="/#hot">综艺剪辑争议对比</a>
+          <a href="/#hot">品牌联名文案审核</a>
+          <a href="/#updates">直播切片完整回放</a>
+          <a href="/#updates">短剧下架原因讨论</a>
+          <a href="/#news">道歉声明逐句分析</a>
+          <a href="/#deep">算法推荐机制讨论</a>
+          <a href="/#comments">评论区观点分化</a>
+          <a href="/#related">争议话题标签索引</a>
+        </div>
+      </section>
+
+      <!-- 11. 时间线 / 趋势观察 -->
+      <section class="panel section-anchor" id="timeline" aria-labelledby="timeline-title">
+        <h2 class="panel-title" id="timeline-title">讨论时间线 <small>本周争议话题节奏</small></h2>
+        <ul class="list-updates">
+          <li><span class="date">周一</span><div><a href="/#hot">综艺剪辑对比截图出现</a> <span class="summary">讨论集中在正片与花絮的取舍差异。</span></div></li>
+          <li><span class="date">周二</span><div><a href="/#hot">品牌联名文案被指冒犯</a> <span class="summary">物料撤下，讨论转向审核流程。</span></div></li>
+          <li><span class="date">周三</span><div><a href="/#deep">深度解析更新：事件扩散路径</a> <span class="summary">梳理截图—社群—热搜—媒体的推进节奏。</span></div></li>
+          <li><span class="date">周四</span><div><a href="/#updates">直播切片完整回放流出</a> <span class="summary">语境差异成为新讨论点。</span></div></li>
+          <li><span class="date">周五</span><div><a href="/#news">短剧下架清单整理</a> <span class="summary">观众自发汇总受影响剧集。</span></div></li>
+          <li><span class="date">周六</span><div><a href="/#comments">网友评论集中出现</a> <span class="summary">观点分化，部分讨论转向信息完整度。</span></div></li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- 右栏：辅助阅读 -->
+    <aside class="right-col" aria-label="辅助阅读入口">
+      <div class="panel">
+        <h2 class="panel-title">页内目录</h2>
+        <ul class="toc">
+          <li><a href="/#intro">内容简介</a></li>
+          <li><a href="/#hot">热门事件推荐</a></li>
+          <li><a href="/#updates">最新动态</a></li>
+          <li><a href="/#categories">分类索引</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">网友评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+          <li><a href="/#timeline">讨论时间线</a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2 class="panel-title">热门条目</h2>
+        <ul class="side-hot">
+          <li><span class="rank">1</span><a href="/#hot">综艺剪辑争议持续发酵</a></li>
+          <li><span class="rank">2</span><a href="/#hot">品牌联名文案被指冒犯</a></li>
+          <li><span class="rank">3</span><a href="/#updates">直播切片被指断章取义</a></li>
+          <li><span class="rank">4</span><a href="/#deep">社交平台算法推荐再引讨论</a></li>
+          <li><span class="rank">5</span><a href="/#updates">短剧内容下架引发猜测</a></li>
+          <li><span class="rank">6</span><a href="/#news">博主道歉声明被逐句分析</a></li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2 class="panel-title">延伸阅读</h2>
+        <div class="quote-card">
+          <p>“争议话题的传播往往不是线性的，截图、社群、热搜和媒体跟进各自放大不同侧面。”</p>
+          <p style="font-size:12px;color:#8a7a52;margin:0;">—— 摘自深度解析</p>
+        </div>
+        <div class="tag-index" style="margin-top:12px;">
+          <a href="/#deep">事件脉络整理</a>
+          <a href="/#faq">信息完整度判断</a>
+          <a href="/#news">回应节奏观察</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<!-- 页脚 -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>每日黑料</h3>
+        <p style="margin:0;color:#b7c1cb;font-size:13px;">网络热门事件与争议话题的内容整理站，关注圈内动态、网友讨论与事件脉络。</p>
+      </div>
+      <div>
+        <h3>频道</h3>
+        <ul class="footer-links">
+          <li><a href="/#hot">热门事件</a></li>
+          <li><a href="/#updates">最新动态</a></li>
+          <li><a href="/#categories">分类索引</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>阅读</h3>
+        <ul class="footer-links">
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#comments">网友评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>方向</h3>
+        <ul class="footer-links">
+          <li><a href="/#related">内容翻车</a></li>
+          <li><a href="/#related">商业纠纷</a></li>
+          <li><a href="/#related">直播动态</a></li>
+          <li><a href="/#related">讨论风向</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-note">
+      <span>© 2025 每日黑料 · 内容整理示例站</span>
+      <span>部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    // 移动端频道按钮：滚动到左栏导航
+    var toggle = document.getElementById('mobile-menu-toggle');
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        var nav = document.querySelector('.side-nav');
+        if (nav) {
+          nav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          toggle.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+
+    // 本地搜索：过滤热门事件卡片
+    var input = document.getElementById('site-search');
+    var btn = document.getElementById('search-btn');
+    var grid = document.getElementById('hot-grid');
+    var noResults = document.getElementById('hot-no-results');
+    if (!grid || !input) return;
+
+    var cards = Array.prototype.slice.call(grid.querySelectorAll('.card'));
+
+    function doSearch() {
+      var q = input.value.trim().toLowerCase();
+      var visible = 0;
+      cards.forEach(function (card) {
+        var text = (card.getAttribute('data-search') || card.textContent || '').toLowerCase();
+        var match = !q || text.indexOf(q) !== -1;
+        card.style.display = match ? '' : 'none';
+        if (match) visible++;
+      });
+      if (noResults) {
+        noResults.style.display = (q && visible === 0) ? 'block' : 'none';
+      }
+    }
+
+    if (btn) btn.addEventListener('click', doSearch);
+    input.addEventListener('input', doSearch);
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        doSearch();
+      }
+    });
+  })();
+</script>
+</body>
+                                                                  </html>
