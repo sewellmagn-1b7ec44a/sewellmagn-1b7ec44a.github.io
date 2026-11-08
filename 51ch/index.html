@@ -1,0 +1,1736 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>51chigua-热门事件追踪_娱乐八卦解析_实时吃瓜指南</title>
+  <meta name="description" content="51chigua 为关注网络热点与娱乐八卦的用户提供内容聚合与解析，涵盖热门事件追踪、话题脉络梳理、吃瓜视角与深度讨论，适合日常浏览和话题跟进。">
+  <meta name="keywords" content="娱乐八卦,热点追踪,网络事件,吃瓜解析,话题讨论">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f1a2e'/%3E%3Ccircle cx='16' cy='14' r='6' fill='%23ff7f50'/%3E%3Cpath d='M8 26h16v2H8z' fill='%23f4e9d8'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --bg: #faf7f2;
+      --surface: #ffffff;
+      --surface-soft: #f5f0e8;
+      --ink: #1e1b26;
+      --ink-soft: #4a4552;
+      --ink-muted: #6f6a78;
+      --accent: #d94f4f;
+      --accent-soft: #fceaea;
+      --accent-deep: #b03a3a;
+      --gold: #b8863a;
+      --gold-soft: #f9f2e4;
+      --border: #e8e2da;
+      --border-light: #f0ebe5;
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(30, 27, 38, 0.04);
+      --shadow-md: 0 4px 14px rgba(30, 27, 38, 0.06);
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+      --announce-h: 36px;
+      --header-h: 64px;
+      --sticky-offset: calc(var(--announce-h) + var(--header-h));
+      --maxw: 1360px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--sticky-offset) + 16px); }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img, svg { display: block; max-width: 100%; }
+    ul, ol { list-style: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    input { font-family: inherit; }
+
+    /* ===== 吸顶公告条 ===== */
+    .announce-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: var(--announce-h);
+      background: linear-gradient(90deg, #2b2438 0%, #3d2f4a 100%);
+      color: #f5e9d4;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .announce-bar .announce-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      white-space: nowrap;
+    }
+    .announce-bar .tag {
+      background: var(--accent);
+      color: #fff;
+      font-size: 11px;
+      padding: 1px 8px;
+      border-radius: 20px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+    .announce-bar .announce-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .announce-bar .announce-text strong { color: #ffd9a8; font-weight: 600; }
+
+    /* ===== 吸顶页头 ===== */
+    .site-header {
+      position: sticky;
+      top: var(--announce-h);
+      z-index: 99;
+      background: rgba(250, 247, 242, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      height: var(--header-h);
+    }
+    .header-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #2b2438, #4a3d5a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      top: 6px;
+      left: 10px;
+    }
+    .brand-mark::before {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 4px;
+      border-radius: 2px;
+      background: #ffd9a8;
+      bottom: 8px;
+      left: 12px;
+    }
+    .brand-text {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .brand-text span { color: var(--accent); }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex: 1;
+      min-width: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .header-nav::-webkit-scrollbar { display: none; }
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink-soft);
+      padding: 6px 12px;
+      border-radius: 20px;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .header-nav a:hover,
+    .header-nav a:focus-visible {
+      background: var(--surface-soft);
+      color: var(--ink);
+      outline: none;
+    }
+    .header-nav a:focus-visible { box-shadow: 0 0 0 2px var(--accent); }
+
+    .header-search {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 4px 6px 4px 14px;
+      flex-shrink: 0;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .header-search:focus-within {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+    .header-search input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 13px;
+      width: 130px;
+      color: var(--ink);
+    }
+    .header-search input::placeholder { color: var(--ink-muted); }
+    .header-search button {
+      background: var(--accent);
+      color: #fff;
+      border-radius: 18px;
+      padding: 4px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .header-search button:hover { background: var(--accent-deep); }
+    .header-search button:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+    /* ===== 首屏 ===== */
+    .hero {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 36px 24px 28px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .hero-content { max-width: 640px; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      letter-spacing: 0.3px;
+    }
+    .hero-badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+    .hero h1 {
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .hero-desc {
+      font-size: 15px;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      margin-bottom: 22px;
+      max-width: 560px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: 28px;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--accent-deep); transform: translateY(-1px); }
+    .btn-primary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface);
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 24px;
+      border-radius: 28px;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-ghost:hover { border-color: var(--ink-muted); background: var(--surface-soft); }
+    .btn-ghost:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .hero-meta {
+      display: flex;
+      gap: 24px;
+      font-size: 13px;
+      color: var(--ink-muted);
+      flex-wrap: wrap;
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 5px; }
+    .hero-meta strong { color: var(--ink); font-weight: 700; font-size: 16px; }
+
+    .hero-visual {
+      position: relative;
+      height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-visual svg {
+      width: 100%;
+      height: 100%;
+      max-width: 360px;
+    }
+
+    /* ===== 三栏主布局 ===== */
+    .main-wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px 48px;
+      display: grid;
+      grid-template-columns: 178px minmax(0, 1fr) 248px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    /* ----- 左栏 ----- */
+    .col-left {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 20px);
+      font-size: 13px;
+    }
+    .sidebar-block {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 16px 14px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .sidebar-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink-muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .side-nav li { margin-bottom: 2px; }
+    .side-nav a {
+      display: block;
+      padding: 5px 8px;
+      border-radius: var(--radius-sm);
+      color: var(--ink-soft);
+      font-weight: 500;
+      transition: background 0.18s, color 0.18s;
+    }
+    .side-nav a:hover,
+    .side-nav a:focus-visible {
+      background: var(--accent-soft);
+      color: var(--accent-deep);
+      outline: none;
+    }
+    .side-nav a:focus-visible { box-shadow: 0 0 0 2px var(--accent); }
+
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag-cloud a {
+      font-size: 12px;
+      background: var(--surface-soft);
+      color: var(--ink-soft);
+      padding: 3px 10px;
+      border-radius: 14px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .tag-cloud a:hover { background: var(--accent-soft); color: var(--accent-deep); }
+    .tag-cloud a:focus-visible { outline: 2px solid var(--accent); }
+
+    /* ----- 中栏 ----- */
+    .col-center { min-width: 0; }
+    .section-block {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 26px 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+    .section-head h2 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+    .section-head .sub {
+      font-size: 12px;
+      color: var(--ink-muted);
+      font-weight: 400;
+    }
+
+    .intro-text p {
+      color: var(--ink-soft);
+      font-size: 14.5px;
+      line-height: 1.85;
+      margin-bottom: 10px;
+    }
+    .intro-text p:last-child { margin-bottom: 0; }
+    .intro-text strong { color: var(--ink); font-weight: 600; }
+
+    /* 热门内容卡片 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .content-card {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      background: var(--surface);
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .content-card:hover {
+      border-color: var(--accent);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .content-card .card-type {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent-deep);
+      background: var(--accent-soft);
+      padding: 2px 8px;
+      border-radius: 12px;
+      align-self: flex-start;
+    }
+    .content-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+      color: var(--ink);
+    }
+    .content-card .card-desc {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+    .content-card .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .content-card .card-tags span {
+      font-size: 11px;
+      color: var(--ink-muted);
+      background: var(--surface-soft);
+      padding: 1px 7px;
+      border-radius: 8px;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 11px;
+      color: var(--ink-muted);
+      border-top: 1px solid var(--border-light);
+      padding-top: 8px;
+      margin-top: 2px;
+    }
+    .card-meta .hot { color: var(--accent); font-weight: 600; }
+
+    /* 最新更新列表 */
+    .update-list li {
+      display: flex;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-light);
+      align-items: flex-start;
+    }
+    .update-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .update-list .u-index {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink-muted);
+      min-width: 24px;
+      padding-top: 2px;
+    }
+    .update-list .u-body { flex: 1; }
+    .update-list .u-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .update-list .u-title a:hover { color: var(--accent-deep); }
+    .update-list .u-summary {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.55;
+    }
+    .update-list .u-time {
+      font-size: 11px;
+      color: var(--ink-muted);
+      white-space: nowrap;
+      padding-top: 2px;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 14px 8px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      background: var(--surface);
+      transition: border-color 0.2s, background 0.2s;
+      text-align: center;
+    }
+    .category-item:hover { border-color: var(--accent); background: var(--accent-soft); }
+    .category-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .category-item .cat-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      background: var(--gold-soft);
+    }
+    .category-item .cat-name {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .category-item .cat-count {
+      font-size: 10px;
+      color: var(--ink-muted);
+    }
+
+    /* 深度解析 */
+    .deep-dive h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 22px 0 10px;
+      letter-spacing: -0.2px;
+    }
+    .deep-dive h3:first-of-type { margin-top: 0; }
+    .deep-dive p {
+      font-size: 14.5px;
+      color: var(--ink-soft);
+      line-height: 1.85;
+      margin-bottom: 12px;
+    }
+    .deep-dive ul, .deep-dive ol {
+      margin: 8px 0 14px 20px;
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.8;
+    }
+    .deep-dive ul { list-style: disc; }
+    .deep-dive ol { list-style: decimal; }
+    .deep-dive li { margin-bottom: 4px; }
+    .deep-dive .highlight-box {
+      background: var(--gold-soft);
+      border-left: 3px solid var(--gold);
+      padding: 12px 16px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 16px 0;
+      font-size: 13.5px;
+      color: var(--ink-soft);
+    }
+
+    /* 体验指南步骤 */
+    .guide-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .guide-step {
+      padding: 14px;
+      border-radius: var(--radius-md);
+      background: var(--surface-soft);
+      border: 1px solid var(--border-light);
+    }
+    .guide-step .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .guide-step h4 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+    .guide-step p {
+      font-size: 12.5px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .faq-list details {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      margin-bottom: 8px;
+      background: var(--surface);
+      overflow: hidden;
+    }
+    .faq-list details[open] { border-color: var(--accent); }
+    .faq-list summary {
+      padding: 14px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      transition: background 0.15s;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: "+";
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--ink-muted);
+      flex-shrink: 0;
+      transition: transform 0.2s;
+    }
+    .faq-list details[open] summary::after { content: "−"; }
+    .faq-list summary:hover { background: var(--surface-soft); }
+    .faq-list summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+    .faq-list .faq-answer {
+      padding: 0 16px 16px;
+      font-size: 13.5px;
+      color: var(--ink-soft);
+      line-height: 1.75;
+    }
+
+    /* 评论 */
+    .comment-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 18px;
+    }
+    .comment-item {
+      display: flex;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .comment-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--surface-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-soft);
+      flex-shrink: 0;
+    }
+    .comment-body { flex: 1; min-width: 0; }
+    .comment-name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 2px;
+    }
+    .comment-text {
+      font-size: 12.5px;
+      color: var(--ink-muted);
+      line-height: 1.55;
+    }
+    .comment-time {
+      font-size: 10px;
+      color: var(--ink-muted);
+      margin-top: 2px;
+    }
+
+    /* 相关资讯 */
+    .news-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .news-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-list .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--ink-muted);
+      margin-bottom: 3px;
+    }
+    .news-list .news-meta .news-date { font-weight: 600; color: var(--accent-deep); }
+    .news-list h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 3px;
+    }
+    .news-list p {
+      font-size: 12.5px;
+      color: var(--ink-muted);
+      line-height: 1.55;
+    }
+
+    /* 相关推荐标签 */
+    .recommend-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .recommend-tags a {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 13px;
+      background: var(--surface-soft);
+      color: var(--ink-soft);
+      padding: 6px 14px;
+      border-radius: 18px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .recommend-tags a:hover { background: var(--accent-soft); color: var(--accent-deep); }
+    .recommend-tags a:focus-visible { outline: 2px solid var(--accent); }
+
+    /* 趋势观察 */
+    .trend-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .trend-card {
+      padding: 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+    }
+    .trend-card .trend-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .trend-card h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+    .trend-card p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      line-height: 1.6;
+    }
+
+    /* ----- 右栏 ----- */
+    .col-right {
+      position: sticky;
+      top: calc(var(--sticky-offset) + 20px);
+      font-size: 13px;
+    }
+    .toc-list li { margin-bottom: 1px; }
+    .toc-list a {
+      display: block;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      color: var(--ink-soft);
+      font-size: 12.5px;
+      border-left: 2px solid transparent;
+      transition: background 0.18s, border-color 0.18s, color 0.18s;
+    }
+    .toc-list a:hover {
+      background: var(--accent-soft);
+      border-left-color: var(--accent);
+      color: var(--accent-deep);
+    }
+    .toc-list a:focus-visible { outline: 2px solid var(--accent); }
+
+    .hot-list li {
+      display: flex;
+      gap: 8px;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border-light);
+      align-items: baseline;
+    }
+    .hot-list li:last-child { border-bottom: none; padding-bottom: 0; }
+    .hot-list .hot-rank {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--ink-muted);
+      min-width: 16px;
+    }
+    .hot-list .hot-rank.top { color: var(--accent); }
+    .hot-list a {
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      line-height: 1.45;
+    }
+    .hot-list a:hover { color: var(--accent-deep); }
+
+    .extend-list li {
+      padding: 5px 0;
+    }
+    .extend-list a {
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .extend-list a::before {
+      content: "→";
+      color: var(--gold);
+      font-size: 11px;
+    }
+    .extend-list a:hover { color: var(--accent-deep); }
+
+    /* ===== 页尾 ===== */
+    .site-footer {
+      background: #1f1a2e;
+      color: #b8b0c4;
+      padding: 40px 24px 24px;
+      margin-top: 20px;
+    }
+    .footer-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .footer-brand .brand-text { color: #fff; margin-bottom: 10px; display: inline-block; }
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #8e869c;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      color: #e8e2f0;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .footer-col ul li { margin-bottom: 6px; }
+    .footer-col a {
+      font-size: 12.5px;
+      color: #8e869c;
+      transition: color 0.2s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-col a:focus-visible { outline: 2px solid var(--gold); }
+    .footer-bottom {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 11.5px;
+      color: #6b6378;
+    }
+    .footer-bottom .disclaimer {
+      font-size: 11px;
+      color: #6b6378;
+    }
+
+    /* 无结果提示 */
+    .no-result {
+      display: none;
+      padding: 16px;
+      text-align: center;
+      color: var(--ink-muted);
+      font-size: 13px;
+      background: var(--surface-soft);
+      border-radius: var(--radius-md);
+      margin-top: 10px;
+    }
+    .no-result.show { display: block; }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 1080px) {
+      .main-wrap {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .col-left, .col-right { position: static; }
+      .col-left { display: flex; flex-wrap: wrap; gap: 12px; }
+      .col-left .sidebar-block { flex: 1 1 200px; margin-bottom: 0; }
+      .col-right { display: flex; flex-wrap: wrap; gap: 12px; }
+      .col-right .sidebar-block { flex: 1 1 200px; margin-bottom: 0; }
+      .hero { grid-template-columns: 1fr; gap: 20px; }
+      .hero-visual { height: 180px; }
+      .comment-list { grid-template-columns: 1fr; }
+      .trend-panel { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --announce-h: 34px; --header-h: 56px; }
+      .header-inner { gap: 10px; padding: 0 14px; }
+      .brand-text { font-size: 18px; }
+      .brand-mark { width: 32px; height: 32px; }
+      .header-search input { width: 80px; }
+      .header-nav a { font-size: 12px; padding: 5px 8px; }
+      .main-wrap { padding: 0 14px 32px; }
+      .hero { padding: 24px 14px 16px; }
+      .hero h1 { font-size: 28px; }
+      .section-block { padding: 18px 16px; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .card-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 20px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .announce-bar .announce-inner { padding: 0 14px; font-size: 12px; }
+    }
+
+    @media (max-width: 400px) {
+      .header-search { display: none; }
+      .hero h1 { font-size: 24px; }
+      .section-head h2 { font-size: 17px; }
+    }
+
+    /* 可见焦点通用 */
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce-bar" role="region" aria-label="站内公告">
+  <div class="announce-inner">
+    <span class="tag">NEW</span>
+    <span class="announce-text"><strong>51chigua 新版专题页上线</strong> — 新增「话题时间线」与「事件脉络图」，帮助快速理解热点来龙去脉，欢迎体验。</span>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/#top" class="brand" aria-label="51chigua 首页">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">51<span>chigua</span></span>
+    </a>
+    <nav class="header-nav" aria-label="主题导航">
+      <a href="/#intro">内容简介</a>
+      <a href="/#hot">热门推荐</a>
+      <a href="/#latest">最新动态</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">体验指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#news">相关资讯</a>
+      <a href="/#recommend">相关推荐</a>
+    </nav>
+    <div class="header-search">
+      <input type="search" id="siteSearch" placeholder="搜索内容…" aria-label="站内搜索">
+      <button type="button" id="searchBtn" aria-label="执行搜索">搜索</button>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-content">
+      <span class="hero-badge">热点追踪 · 话题解析 · 每日更新</span>
+      <h1 id="hero-title">51chigua</h1>
+      <p class="hero-desc">
+        聚焦网络热点与娱乐话题，从事件脉络、多方视角到讨论风向，提供有层次的吃瓜内容聚合。适合通勤路上快速了解、睡前深度跟进，也适合想弄清来龙去脉的读者。
+      </p>
+      <div class="hero-actions">
+        <a href="/#hot" class="btn-primary">浏览热门内容</a>
+        <a href="/#deep" class="btn-ghost">阅读深度解析</a>
+      </div>
+      <div class="hero-meta">
+        <span><strong>136</strong> 个话题追踪</span>
+        <span><strong>28</strong> 篇深度解析</span>
+        <span><strong>每日</strong> 两次更新</span>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 360 260" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="话题脉络示意图">
+        <rect x="20" y="20" width="320" height="220" rx="18" fill="#f5f0e8"/>
+        <circle cx="100" cy="90" r="36" fill="#fceaea"/>
+        <circle cx="100" cy="90" r="14" fill="#d94f4f"/>
+        <circle cx="230" cy="70" r="26" fill="#f9f2e4"/>
+        <circle cx="230" cy="70" r="10" fill="#b8863a"/>
+        <circle cx="180" cy="170" r="30" fill="#e8e2f0"/>
+        <circle cx="180" cy="170" r="11" fill="#4a3d5a"/>
+        <path d="M136 90 Q180 60 204 70" stroke="#d94f4f" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+        <path d="M210 90 Q200 130 190 140" stroke="#b8863a" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+        <path d="M150 160 Q120 140 120 126" stroke="#4a3d5a" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+        <rect x="60" y="200" width="80" height="8" rx="4" fill="#e8e2da"/>
+        <rect x="160" y="200" width="120" height="8" rx="4" fill="#e8e2da"/>
+        <rect x="60" y="216" width="60" height="6" rx="3" fill="#f0ebe5"/>
+        <rect x="140" y="216" width="90" height="6" rx="3" fill="#f0ebe5"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 三栏主体 -->
+  <div class="main-wrap">
+
+    <!-- 左栏 -->
+    <aside class="col-left" aria-label="频道与标签索引">
+      <div class="sidebar-block">
+        <div class="sidebar-title">频道导航</div>
+        <nav aria-label="左栏频道">
+          <ul class="side-nav">
+            <li><a href="/#hot">热门内容推荐</a></li>
+            <li><a href="/#latest">最新更新动态</a></li>
+            <li><a href="/#categories">分类入口</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#recommend">相关推荐</a></li>
+            <li><a href="/#trend">趋势观察</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-title">热门标签</div>
+        <div class="tag-cloud">
+          <a href="/#hot">娱乐八卦</a>
+          <a href="/#hot">热点追踪</a>
+          <a href="/#hot">事件梳理</a>
+          <a href="/#hot">吃瓜视角</a>
+          <a href="/#hot">明星动态</a>
+          <a href="/#hot">综艺话题</a>
+          <a href="/#hot">影视讨论</a>
+          <a href="/#hot">网络热议</a>
+          <a href="/#hot">舆论风向</a>
+          <a href="/#hot">话题时间线</a>
+        </div>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-title">快速筛选</div>
+        <nav aria-label="快速筛选">
+          <ul class="side-nav">
+            <li><a href="/#hot">今日新增话题</a></li>
+            <li><a href="/#hot">本周热议事件</a></li>
+            <li><a href="/#hot">深度长文</a></li>
+            <li><a href="/#hot">短评速览</a></li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- 中栏 -->
+    <div class="col-center">
+
+      <!-- 1. 内容简介 -->
+      <section class="section-block" id="intro" aria-labelledby="intro-title">
+        <div class="section-head">
+          <h2 id="intro-title">关于 51chigua 的内容定位</h2>
+          <span class="sub">阅读约 2 分钟</span>
+        </div>
+        <div class="intro-text">
+          <p><strong>51chigua</strong> 是一个围绕网络热点与娱乐话题搭建的内容聚合页，核心目标是把散落在各处的讨论线索整理成可读、可跟进的条目。这里不生产未经核实的消息，而是把已经进入公共视野的话题按类型、热度和时间线归类，方便读者快速判断“发生了什么、各方在说什么、接下来可能关注什么”。</p>
+          <p>页面内容覆盖娱乐八卦解析、热点事件追踪、综艺与影视话题讨论、网络舆论风向观察等方向。每一条内容都配有类型标签与简短看点，读者可以先扫标签判断是否感兴趣，再决定是否进入深度解析。对于习惯在通勤路上刷话题、睡前想弄清来龙去脉的读者，这种“先看摘要、再读长文”的节奏比较友好。</p>
+          <p>与单纯的资讯流不同，51chigua 更强调话题之间的关联。同一事件在不同阶段的讨论会被归并到一条时间线里，避免读者在碎片信息中反复拼凑。如果你关心的是“某个话题为什么突然火了”“不同立场的讨论焦点差在哪”，分类入口和深度解析区会提供更集中的阅读路径。</p>
+          <p>更新节奏上，热门条目通常每日有两次整理：午间汇总上午的新增讨论，晚间补充下午到傍晚的进展。深度解析则按话题成熟度发布，不追求第一时间抢发，而是等讨论线索相对清晰后再做梳理。这样的安排更适合想“跟上话题但不想被信息淹没”的读者。</p>
+        </div>
+      </section>
+
+      <!-- 2. 热门内容推荐 -->
+      <section class="section-block" id="hot" aria-labelledby="hot-title">
+        <div class="section-head">
+          <h2 id="hot-title">热门内容推荐</h2>
+          <span class="sub">按讨论热度排序</span>
+        </div>
+        <div class="card-grid" id="hotCardGrid">
+          <article class="content-card">
+            <span class="card-type">事件追踪</span>
+            <h3>某综艺剪辑争议事件脉络梳理</h3>
+            <p class="card-desc">从预告片段到正片播出，讨论焦点如何从剪辑节奏转向嘉宾互动，三方声明的时间顺序整理。</p>
+            <div class="card-tags"><span>综艺话题</span><span>剪辑争议</span><span>舆论风向</span></div>
+            <div class="card-meta"><span class="hot">热度 9.2</span><span>3 小时前更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">深度解析</span>
+            <h3>影视剧番位讨论中的粉丝逻辑</h3>
+            <p class="card-desc">为什么同一部剧的演员排序能引发持续争论？从宣传物料、合同惯例到粉丝心态逐层拆解。</p>
+            <div class="card-tags"><span>影视讨论</span><span>番位争议</span><span>粉丝文化</span></div>
+            <div class="card-meta"><span class="hot">热度 8.7</span><span>6 小时前更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">话题时间线</span>
+            <h3>明星代言变动事件的完整时间线</h3>
+            <p class="card-desc">从品牌官宣到物料调整，按日期整理公开可查的节点，标注每个阶段讨论重心的转移。</p>
+            <div class="card-tags"><span>明星动态</span><span>品牌合作</span><span>时间线</span></div>
+            <div class="card-meta"><span class="hot">热度 8.5</span><span>昨天更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">吃瓜视角</span>
+            <h3>网络爆料帖的可信度判断方法</h3>
+            <p class="card-desc">面对截图、匿名帖和所谓“知情人”说法，从信源、时间、利益动机三个角度建立判断框架。</p>
+            <div class="card-tags"><span>网络热议</span><span>信息辨别</span><span>吃瓜指南</span></div>
+            <div class="card-meta"><span class="hot">热度 8.1</span><span>昨天更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">对比分析</span>
+            <h3>两档同类型综艺的话题打法差异</h3>
+            <p class="card-desc">同样主打嘉宾互动，一档靠冲突剪辑上热搜，另一档靠慢节奏口碑发酵，传播路径有何不同。</p>
+            <div class="card-tags"><span>综艺话题</span><span>传播对比</span><span>内容策略</span></div>
+            <div class="card-meta"><span class="hot">热度 7.9</span><span>2 天前更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">事件追踪</span>
+            <h3>影视项目换角传闻的各方回应整理</h3>
+            <p class="card-desc">从选角爆料到剧组声明，梳理公开渠道的回应内容，区分已确认与仍属传闻的部分。</p>
+            <div class="card-tags"><span>影视讨论</span><span>选角话题</span><span>回应整理</span></div>
+            <div class="card-meta"><span class="hot">热度 7.6</span><span>2 天前更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">趋势观察</span>
+            <h3>短剧演员进入主流综艺的路径观察</h3>
+            <p class="card-desc">从平台短剧到卫视综艺，近期几位演员的曝光节奏与话题承接方式，呈现出一条可参考的路径。</p>
+            <div class="card-tags"><span>短剧话题</span><span>演员动态</span><span>行业观察</span></div>
+            <div class="card-meta"><span class="hot">热度 7.4</span><span>3 天前更新</span></div>
+          </article>
+          <article class="content-card">
+            <span class="card-type">深度解析</span>
+            <h3>热搜词条背后的选题逻辑</h3>
+            <p class="card-desc">一个话题能冲上热搜，除了事件本身，词条措辞、配图选择和首发账号也在影响传播效率。</p>
+            <div class="card-tags"><span>热搜分析</span><span>传播机制</span><span>话题运营</span></div>
+            <div class="card-meta"><span class="hot">热度 7.2</span><span>3 天前更新</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. 最新更新 -->
+      <section class="section-block" id="latest" aria-labelledby="latest-title">
+        <div class="section-head">
+          <h2 id="latest-title">最新更新动态</h2>
+          <span class="sub">按发布时间倒序</span>
+        </div>
+        <ul class="update-list">
+          <li>
+            <span class="u-index">01</span>
+            <div class="u-body">
+              <div class="u-title"><a href="/#deep">某电影首映礼站位讨论新增现场照片说明</a></div>
+              <div class="u-summary">主办方发布完整合影与流程说明后，讨论焦点从站位转向活动执行细节。</div>
+            </div>
+            <span class="u-time">09:40</span>
+          </li>
+          <li>
+            <span class="u-index">02</span>
+            <div class="u-body">
+              <div class="u-title"><a href="/#deep">综艺嘉宾互动片段二次剪辑版本流传</a></div>
+              <div class="u-summary">不同剪辑版本在社交平台传播，观众对语境完整性的讨论明显增加。</div>
+            </div>
+            <span class="u-time">08:55</span>
+          </li>
+          <li>
+            <span class="u-index">03</span>
+            <div class="u-body">
+              <div class="u-title"><a href="/#deep">品牌方调整宣传物料引发新一轮讨论</a></div>
+              <div class="u-summary">物料更新后，关于合作关系的猜测出现分化，部分账号开始整理时间线。</div>
+            </div>
+            <span class="u-time">昨天 22:10</span>
+          </li>
+          <li>
+            <span class="u-index">04</span>
+            <div class="u-body">
+              <div class="u-title"><a href="/#deep">短剧平台发布季度片单，题材分布受关注</a></div>
+              <div class="u-summary">片单中都市情感与悬疑类占比提升，评论区开始讨论同质化与差异化问题。</div>
+            </div>
+            <span class="u-time">昨天 20:30</span>
+          </li>
+          <li>
+            <span class="u-index">05</span>
+            <div class="u-body">
+              <div class="u-title"><a href="/#deep">某演员工作室发布行程调整通知</a></div>
+              <div class="u-summary">通知提及近期活动安排变化，粉丝与路人关注点出现明显差异。</div>
+            </div>
+            <span class="u-time">昨天 18:05</span>
+          </li>
+          <li>
+            <span class="u-index">06</span>
+            <div class="u-body">
+              <div class="u-title"><a href="/#deep">影视论坛出现选角讨论长帖，信息待核实</a></div>
+              <div class="u-summary">帖子列出多个项目与演员组合，目前尚无官方渠道确认，建议以公告为准。</div>
+            </div>
+            <span class="u-time">昨天 15:20</span>
+          </li>
+          <li>
+            <span class="u-index">07</span>
+            <div class="u-body">
+              <div class="u-title"><a href="/#deep">综艺节目官微更换头像引发猜测</a></div>
+              <div class="u-summary">头像变化与新一季筹备传闻叠加，节目组暂未就阵容发布正式信息。</div>
+            </div>
+            <span class="u-time">昨天 11:45</span>
+          </li>
+          <li>
+            <span class="u-index">08</span>
+            <div class="u-body">
+              <div class="u-title"><a href="/#deep">娱乐公司发布年度内容计划摘要</a></div>
+              <div class="u-summary">计划提到剧集与综艺双线布局，行业账号开始比较各公司片单结构。</div>
+            </div>
+            <span class="u-time">前天 17:30</span>
+          </li>
+          <li>
+            <span class="u-index">09</span>
+            <div class="u-body">
+              <div class="u-title"><a href="/#deep">热搜话题词条更替速度观察记录</a></div>
+              <div class="u-summary">同一事件在不同时段的词条表述变化，反映出讨论重心的迁移。</div>
+            </div>
+            <span class="u-time">前天 14:10</span>
+          </li>
+          <li>
+            <span class="u-index">10</span>
+            <div class="u-body">
+              <div class="u-title"><a href="/#deep">粉丝应援活动调整公告汇总</a></div>
+              <div class="u-summary">多个粉丝站发布活动调整说明，强调理性表达与信息核实。</div>
+            </div>
+            <span class="u-time">前天 10:00</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4. 分类入口 -->
+      <section class="section-block" id="categories" aria-labelledby="categories-title">
+        <div class="section-head">
+          <h2 id="categories-title">内容分类入口</h2>
+          <span class="sub">按垂类定位</span>
+        </div>
+        <div class="category-grid">
+          <a href="/#hot" class="category-item">
+            <span class="cat-icon" aria-hidden="true">📺</span>
+            <span class="cat-name">综艺话题</span>
+            <span class="cat-count">32 条</span>
+          </a>
+          <a href="/#hot" class="category-item">
+            <span class="cat-icon" aria-hidden="true">🎬</span>
+            <span class="cat-name">影视讨论</span>
+            <span class="cat-count">27 条</span>
+          </a>
+          <a href="/#hot" class="category-item">
+            <span class="cat-icon" aria-hidden="true">⭐</span>
+            <span class="cat-name">明星动态</span>
+            <span class="cat-count">24 条</span>
+          </a>
+          <a href="/#hot" class="category-item">
+            <span class="cat-icon" aria-hidden="true">🔥</span>
+            <span class="cat-name">热搜分析</span>
+            <span class="cat-count">19 条</span>
+          </a>
+          <a href="/#hot" class="category-item">
+            <span class="cat-icon" aria-hidden="true">📱</span>
+            <span class="cat-name">短剧话题</span>
+            <span class="cat-count">16 条</span>
+          </a>
+          <a href="/#hot" class="category-item">
+            <span class="cat-icon" aria-hidden="true">💬</span>
+            <span class="cat-name">舆论风向</span>
+            <span class="cat-count">14 条</span>
+          </a>
+          <a href="/#hot" class="category-item">
+            <span class="cat-icon" aria-hidden="true">🎤</span>
+            <span class="cat-name">粉丝文化</span>
+            <span class="cat-count">12 条</span>
+          </a>
+          <a href="/#hot" class="category-item">
+            <span class="cat-icon" aria-hidden="true">📅</span>
+            <span class="cat-name">事件时间线</span>
+            <span class="cat-count">11 条</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 5. 深度解析正文 -->
+      <section class="section-block deep-dive" id="deep" aria-labelledby="deep-title">
+        <div class="section-head">
+          <h2 id="deep-title">深度解析：如何理解一个热点话题的完整脉络</h2>
+          <span class="sub">阅读约 6 分钟</span>
+        </div>
+        <p>当一条娱乐话题突然占据信息流时，读者面对的很可能是经过多轮转述的片段。要还原一个话题的基本脉络，可以先把公开信息按“事实描述、各方回应、讨论分化”三个层次拆开。51chigua 在整理热门条目时，通常先标注哪些内容来自官方公告、哪些来自媒体采访、哪些仍属于社交平台上的推测，再按时间顺序排列。这样做的目的不是给出定论，而是让读者能清楚地看到信息在哪个环节出现了分叉。</p>
+
+        <h3>第一步：区分事实陈述与观点表达</h3>
+        <p>很多争议的起点并不是事件本身，而是对同一事实的不同表述。比如一场活动的座位安排，可以写成“主办方统一调配”，也可以写成“团队协商结果”，两种写法带给读者的感受完全不同。在阅读热门条目时，可以先问三个问题：这条信息是谁说的？他是否有直接的信息来源？表述中是描述行为还是评价动机？把这三个问题过一遍，大多数模糊信息会立刻显形。</p>
+        <div class="highlight-box">
+          实用提示：遇到带有“据传”“疑似”“知情人称”的表述，先把它归入待核实区，不要和官方确认信息放在同一层级比较。
+        </div>
+
+        <h3>第二步：按时间线整理关键节点</h3>
+        <p>热点话题的讨论重心往往随时间迁移。以常见的影视项目换角传闻为例，早期讨论集中在“是否换人”，中期转向“为什么换”，后期则可能变成对行业惯例的讨论。如果只截取其中一个阶段的信息，很容易误解整体走向。51chigua 的话题时间线会把公开节点按日期排列，并标注每个节点的信息来源类型。读者可以直观看到：哪些节点之后讨论量明显上升，哪些节点之后出现官方回应，哪些节点只是自媒体循环引用。</p>
+        <ul>
+          <li><strong>节点一：</strong>首个公开爆料出现，信息源多为匿名或二手转述，讨论以猜测为主。</li>
+          <li><strong>节点二：</strong>相关方发布简短回应或调整公开物料，讨论开始从猜测转向解读。</li>
+          <li><strong>节点三：</strong>多家媒体跟进采访，出现更具体的时间、地点或流程描述。</li>
+          <li><strong>节点四：</strong>话题热度回落，讨论转向行业现象或同类案例比较。</li>
+        </ul>
+
+        <h3>第三步：观察不同立场的讨论焦点</h3>
+        <p>同一个话题下，粉丝、普通观众、行业从业者和媒体账号的关注点通常不同。粉丝更在意偶像的处境与声誉，普通观众更关心作品是否受影响，行业从业者会讨论流程与惯例，媒体账号则倾向于提炼可传播的结论。把这些立场分开看，能帮助读者理解为什么评论区会出现看似毫不相干的争论。在 51chigua 的深度解析中，这一部分通常以对照方式呈现，而不是把不同立场混在一起概括。</p>
+        <p>需要提醒的是，立场分析不等于站队。了解某一方为什么这样表达，不代表认同其结论。读者可以把立场描述当作理解讨论结构的工具，再结合事实层信息形成自己的判断。</p>
+
+        <h3>第四步：判断话题的后续关注价值</h3>
+        <p>并非所有热点都值得持续跟进。一个话题是否还有后续关注价值，可以看三个信号：是否有可验证的新信息进入公共视野；相关方是否仍有未完成的公开动作；讨论是否已经转向更具普遍性的行业问题。如果三个信号都没有，话题通常会自然降温。反之，如果出现新的官方公告、新的采访内容或新的同类案例，话题可能进入第二轮讨论。51chigua 的更新动态会标注这些信号，帮助读者判断是否需要继续关注。</p>
+        <p>最后要强调的是，娱乐话题的消费应当保持适度。把时间线当作理解工具，而不是把猜测当作事实传播，是更可持续的吃瓜方式。51chigua 提供的分类、标签和时间线，都是为了让这个过程更有条理，而不是替代读者自己的判断。</p>
+      </section>
+
+      <!-- 6. 体验指南 -->
+      <section class="section-block" id="guide" aria-labelledby="guide-title">
+        <div class="section-head">
+          <h2 id="guide-title">体验指南：如何使用站内功能</h2>
+          <span class="sub">快速上手</span>
+        </div>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <span class="step-num">1</span>
+            <h4>从分类入口进入</h4>
+            <p>先按综艺、影视、明星动态等分类缩小范围，再浏览对应条目，避免被信息流带散注意力。</p>
+          </div>
+          <div class="guide-step">
+            <span class="step-num">2</span>
+            <h4>用标签判断兴趣</h4>
+            <p>每张卡片和每条更新都配有类型标签与话题标签，扫一眼标签即可决定是否深入阅读。</p>
+          </div>
+          <div class="guide-step">
+            <span class="step-num">3</span>
+            <h4>搜索具体内容</h4>
+            <p>页头搜索框支持本地内容查找，输入关键词后会筛选当前页面可见的条目并给出无结果提示。</p>
+          </div>
+          <div class="guide-step">
+            <span class="step-num">4</span>
+            <h4>移动端横向导航</h4>
+            <p>手机端频道导航可横向滑动，侧栏内容自动排列到主内容之后，阅读顺序不受影响。</p>
+          </div>
+          <div class="guide-step">
+            <span class="step-num">5</span>
+            <h4>按时间线追更</h4>
+            <p>深度解析中的时间线按日期排列关键节点，适合想弄清话题前后关系时集中阅读。</p>
+          </div>
+          <div class="guide-step">
+            <span class="step-num">6</span>
+            <h4>扩展阅读路径</h4>
+            <p>右栏热门条目与相关推荐提供不同角度入口，从具体事件延伸到同类话题或行业观察。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. FAQ -->
+      <section class="section-block" id="faq" aria-labelledby="faq-title">
+        <div class="section-head">
+          <h2 id="faq-title">常见问题</h2>
+          <span class="sub">围绕内容消费与话题跟进</span>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>51chigua 上的娱乐八卦内容适合什么人看？</summary>
+            <div class="faq-answer">适合对网络热点和娱乐话题有关注需求、但不想被碎片信息淹没的读者。尤其是习惯先看摘要再决定是否深入、希望了解话题前后脉络的人群。</div>
+          </details>
+          <details>
+            <summary>热门话题一般多久更新一次？</summary>
+            <div class="faq-answer">热门条目通常每日整理两次，午间和晚间各一次。深度解析按话题成熟度发布，不固定频次，但会在更新动态中标注新增内容。</div>
+          </details>
+          <details>
+            <summary>在哪里可以看到某个话题的完整时间线？</summary>
+            <div class="faq-answer">在深度解析板块中，涉及时间线的话题会按日期列出关键节点，并标注信息来源类型。也可以从分类入口的「事件时间线」类别进入集中浏览。</div>
+          </details>
+          <details>
+            <summary>如何判断一条爆料信息是否可信？</summary>
+            <div class="faq-answer">建议先看信息来源是官方公告、媒体采访还是匿名转述，再结合时间节点和表述方式判断。深度解析中的「事实陈述与观点表达」一节提供了具体判断方法。</div>
+          </details>
+          <details>
+            <summary>短剧话题和综艺话题在内容上有什么区别？</summary>
+            <div class="faq-answer">短剧话题更多围绕平台片单、题材分布和演员曝光路径展开；综艺话题则集中在节目剪辑、嘉宾互动和传播节奏。两者在分类入口中有各自独立的归类。</div>
+          </details>
+          <details>
+            <summary>手机端阅读时侧栏内容在哪里？</summary>
+            <div class="faq-answer">在窄屏设备上，左右侧栏会排列到主内容之后，频道导航转为可横向滑动的形式，正文阅读顺序与桌面端保持一致，不影响主要内容获取。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 8. 用户评论 -->
+      <section class="section-block" id="comments" aria-labelledby="comments-title">
+        <div class="section-head">
+          <h2 id="comments-title">用户评论</h2>
+          <span class="sub">来自站内读者的示例反馈</span>
+        </div>
+        <div class="comment-list">
+          <div class="comment-item"><div class="comment-avatar">林</div><div class="comment-body"><div class="comment-name">林间有风</div><div class="comment-text">时间线整理得很清楚，终于不用在几个平台之间来回翻了。</div><div class="comment-time">今天 10:12</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">陈</div><div class="comment-body"><div class="comment-name">陈小满</div><div class="comment-text">分类标签挺实用，扫一眼就知道是不是自己想看的类型。</div><div class="comment-time">今天 09:45</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">周</div><div class="comment-body"><div class="comment-name">周末不加班</div><div class="comment-text">深度解析比单纯的热搜汇总有信息量，适合睡前慢慢看。</div><div class="comment-time">今天 08:30</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">吴</div><div class="comment-body"><div class="comment-name">吴聊先生</div><div class="comment-text">有些条目更新频率可以再快一点，热点过去之后才看到整理。</div><div class="comment-time">昨天 22:18</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">许</div><div class="comment-body"><div class="comment-name">许愿树</div><div class="comment-text">搜索功能如果能支持更多关键词就好了，现在只能查标题。</div><div class="comment-time">昨天 21:05</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">郑</div><div class="comment-body"><div class="comment-name">郑在吃瓜</div><div class="comment-text">评论区的语气比较理性，没有那么多互撕，这点很难得。</div><div class="comment-time">昨天 19:40</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">孙</div><div class="comment-body"><div class="comment-name">孙悟饭</div><div class="comment-text">综艺话题的分类很细，找某类讨论比以前方便。</div><div class="comment-time">昨天 17:22</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">李</div><div class="comment-body"><div class="comment-name">李子树下</div><div class="comment-text">希望多一些对比类的内容，比如两个同类事件的传播差异。</div><div class="comment-time">昨天 15:50</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">王</div><div class="comment-body"><div class="comment-name">王不留行</div><div class="comment-text">页面加载速度不错，手机上也没有排版错乱。</div><div class="comment-time">昨天 14:10</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">赵</div><div class="comment-body"><div class="comment-name">赵小刀</div><div class="comment-text">热点追踪的摘要写得简洁，不用点进去就能判断有没有兴趣。</div><div class="comment-time">昨天 12:33</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">钱</div><div class="comment-body"><div class="comment-name">钱多多</div><div class="comment-text">偶尔有些条目会重复出现，希望去重做得更好一些。</div><div class="comment-time">昨天 10:18</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">刘</div><div class="comment-body"><div class="comment-name">刘一舟</div><div class="comment-text">深度解析的立场对照部分很有帮助，能理解不同人在争什么。</div><div class="comment-time">昨天 09:05</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">黄</div><div class="comment-body"><div class="comment-name">黄小仙</div><div class="comment-text">短剧话题的片单整理很实用，题材分布一目了然。</div><div class="comment-time">前天 22:40</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">张</div><div class="comment-body"><div class="comment-name">张望远方</div><div class="comment-text">建议增加收藏或稍后读功能，有些长文需要分次看。</div><div class="comment-time">前天 20:15</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">何</div><div class="comment-body"><div class="comment-name">何同学</div><div class="comment-text">整体内容偏向梳理而非炒热，适合不想被情绪带着走的人。</div><div class="comment-time">前天 18:30</div></div></div>
+          <div class="comment-item"><div class="comment-avatar">高</div><div class="comment-body"><div class="comment-name">高乐高</div><div class="comment-text">希望热搜分析能多一些，想知道话题是怎么被推起来的。</div><div class="comment-time">前天 16:12</div></div></div>
+        </div>
+      </section>
+
+      <!-- 9. 相关资讯 -->
+      <section class="section-block" id="news" aria-labelledby="news-title">
+        <div class="section-head">
+          <h2 id="news-title">相关资讯</h2>
+          <span class="sub">近期话题延伸</span>
+        </div>
+        <ul class="news-list">
+          <li>
+            <div class="news-meta"><span class="news-date">2025-03-18</span><span>行业观察</span></div>
+            <h4>短剧平台季度片单发布，都市情感与悬疑题材占比上升</h4>
+            <p>多家平台公布新一季片单，题材分布出现集中趋势，行业账号开始比较各家的差异化策略。</p>
+          </li>
+          <li>
+            <div class="news-meta"><span class="news-date">2025-03-17</span><span>综艺话题</span></div>
+            <h4>同类型综艺传播路径分化，冲突剪辑与慢节奏口碑各有打法</h4>
+            <p>两档节目在嘉宾配置相近的情况下，热搜词条与观众讨论方向呈现明显差异。</p>
+          </li>
+          <li>
+            <div class="news-meta"><span class="news-date">2025-03-16</span><span>影视讨论</span></div>
+            <h4>影视项目选角传闻增多，官方回应节奏受关注</h4>
+            <p>多个项目出现选角爆料，剧组与演员团队的回应速度成为讨论焦点之一。</p>
+          </li>
+          <li>
+            <div class="news-meta"><span class="news-date">2025-03-15</span><span>热搜分析</span></div>
+            <h4>热搜词条措辞变化反映讨论重心迁移</h4>
+            <p>同一事件在不同时段的词条表述出现明显调整，从事件描述转向观点提炼。</p>
+          </li>
+          <li>
+            <div class="news-meta"><span class="news-date">2025-03-14</span><span>粉丝文化</span></div>
+            <h4>粉丝站联合发布理性表达倡议，强调信息核实</h4>
+            <p>多个粉丝站发布公告，呼吁在话题讨论中减少未经核实信息的二次传播。</p>
+          </li>
+          <li>
+            <div class="news-meta"><span class="news-date">2025-03-13</span><span>明星动态</span></div>
+            <h4>艺人工作室调整公开行程，粉丝关注点出现分化</h4>
+            <p>行程调整通知发布后，粉丝与普通观众对同一信息的关注角度明显不同。</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 10. 相关推荐 -->
+      <section class="section-block" id="recommend" aria-labelledby="recommend-title">
+        <div class="section-head">
+          <h2 id="recommend-title">相关推荐</h2>
+          <span class="sub">按话题方向延伸</span>
+        </div>
+        <div class="recommend-tags">
+          <a href="/#hot">综艺剪辑争议解析</a>
+          <a href="/#hot">影视番位讨论逻辑</a>
+          <a href="/#hot">明星代言变动时间线</a>
+          <a href="/#hot">网络爆料可信度判断</a>
+          <a href="/#hot">同类型综艺传播对比</a>
+          <a href="/#hot">短剧演员进入主流综艺</a>
+          <a href="/#hot">热搜词条选题逻辑</a>
+          <a href="/#hot">粉丝应援活动调整</a>
+        </div>
+      </section>
+
+      <!-- 11. 趋势观察 -->
+      <section class="section-block" id="trend" aria-labelledby="trend-title">
+        <div class="section-head">
+          <h2 id="trend-title">趋势观察</h2>
+          <span class="sub">近期话题结构变化</span>
+        </div>
+        <div class="trend-panel">
+          <div class="trend-card">
+            <div class="trend-label">话题结构</div>
+            <h4>从单一事件转向行业比较</h4>
+            <p>近期热门讨论中，单纯的事件通报减少，更多账号开始把个案放进同类项目或行业惯例中比较，讨论的信息密度有所提升。</p>
+          </div>
+          <div class="trend-card">
+            <div class="trend-label">传播节奏</div>
+            <h4>回应速度影响讨论走向</h4>
+            <p>相关方是否在话题上升期给出回应，明显影响后续讨论的焦点分布。回应越晚，猜测性内容占比越高。</p>
+          </div>
+          <div class="trend-card">
+            <div class="trend-label">内容类型</div>
+            <h4>时间线与对照分析需求上升</h4>
+            <p>读者对“发生了什么、各方怎么说”的结构化整理需求增加，单纯的观点输出类内容互动量相对下降。</p>
+          </div>
+          <div class="trend-card">
+            <div class="trend-label">阅读习惯</div>
+            <h4>移动端短段落更受欢迎</h4>
+            <p>手机端阅读占比持续走高，段落简短、关键信息前置的条目完读率更高，长文则更依赖目录和时间线辅助。</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- 右栏 -->
+    <aside class="col-right" aria-label="辅助阅读">
+      <div class="sidebar-block">
+        <div class="sidebar-title">页内目录</div>
+        <nav aria-label="页内目录">
+          <ul class="toc-list">
+            <li><a href="/#intro">内容简介</a></li>
+            <li><a href="/#hot">热门内容推荐</a></li>
+            <li><a href="/#latest">最新更新动态</a></li>
+            <li><a href="/#categories">分类入口</a></li>
+            <li><a href="/#deep">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#recommend">相关推荐</a></li>
+            <li><a href="/#trend">趋势观察</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-title">热门条目</div>
+        <ul class="hot-list">
+          <li><span class="hot-rank top">1</span><a href="/#hot">综艺剪辑争议事件脉络</a></li>
+          <li><span class="hot-rank top">2</span><a href="/#hot">影视番位讨论中的粉丝逻辑</a></li>
+          <li><span class="hot-rank top">3</span><a href="/#hot">明星代言变动时间线</a></li>
+          <li><span class="hot-rank">4</span><a href="/#hot">网络爆料可信度判断</a></li>
+          <li><span class="hot-rank">5</span><a href="/#hot">两档综艺话题打法差异</a></li>
+          <li><span class="hot-rank">6</span><a href="/#hot">影视项目换角回应整理</a></li>
+          <li><span class="hot-rank">7</span><a href="/#hot">短剧演员进入主流综艺</a></li>
+          <li><span class="hot-rank">8</span><a href="/#hot">热搜词条背后的选题逻辑</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-block">
+        <div class="sidebar-title">延伸阅读</div>
+        <ul class="extend-list">
+          <li><a href="/#deep">事实陈述与观点表达的区分</a></li>
+          <li><a href="/#deep">话题时间线的整理方法</a></li>
+          <li><a href="/#deep">不同立场讨论焦点对照</a></li>
+          <li><a href="/#deep">话题后续关注价值判断</a></li>
+          <li><a href="/#guide">移动端阅读与筛选技巧</a></li>
+          <li><a href="/#trend">近期话题结构变化观察</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+</main>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="brand-text">51<span style="color:#d94f4f;">chigua</span></span>
+      <p>聚焦网络热点与娱乐话题的内容聚合页，提供事件脉络梳理、话题分类与深度解析，适合日常浏览与话题跟进。</p>
+    </div>
+    <div class="footer-col">
+      <h4>内容板块</h4>
+      <ul>
+        <li><a href="/#hot">热门内容推荐</a></li>
+        <li><a href="/#latest">最新更新动态</a></li>
+        <li><a href="/#categories">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#trend">趋势观察</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>话题方向</h4>
+      <ul>
+        <li><a href="/#hot">综艺话题</a></li>
+        <li><a href="/#hot">影视讨论</a></li>
+        <li><a href="/#hot">明星动态</a></li>
+        <li><a href="/#hot">热搜分析</a></li>
+        <li><a href="/#hot">短剧话题</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>使用与帮助</h4>
+      <ul>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#recommend">相关推荐</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 51chigua · 内容聚合展示</span>
+    <span class="disclaimer">部分内容为示例数据，仅用于展示页面结构</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    'use strict';
+
+    // 本地搜索：筛选卡片与更新列表
+    var searchInput = document.getElementById('siteSearch');
+    var searchBtn = document.getElementById('searchBtn');
+    var hotGrid = document.getElementById('hotCardGrid');
+    var noResult = null;
+
+    function ensureNoResult() {
+      if (noResult) return noResult;
+      noResult = document.createElement('div');
+      noResult.className = 'no-result';
+      noResult.setAttribute('role', 'status');
+      noResult.textContent = '没有找到匹配的内容，试试其他关键词。';
+      if (hotGrid && hotGrid.parentNode) {
+        hotGrid.parentNode.insertBefore(noResult, hotGrid.nextSibling);
+      }
+      return noResult;
+    }
+
+    function runSearch() {
+      var q = (searchInput.value || '').trim().toLowerCase();
+      var cards = document.querySelectorAll('#hotCardGrid .content-card');
+      var updates = document.querySelectorAll('#latest .update-list li');
+      var news = document.querySelectorAll('#news .news-list li');
+      var visibleCount = 0;
+
+      function matchText(el, text) {
+        if (!q) return true;
+        return text.toLowerCase().indexOf(q) !== -1;
+      }
+
+      cards.forEach(function (card) {
+        var text = card.textContent || '';
+        var show = matchText(card, text);
+        card.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      });
+
+      updates.forEach(function (li) {
+        var text = li.textContent || '';
+        li.style.display = matchText(li, text) ? '' : 'none';
+        if (matchText(li, text)) visibleCount++;
+      });
+
+      news.forEach(function (li) {
+        var text = li.textContent || '';
+        li.style.display = matchText(li, text) ? '' : 'none';
+        if (matchText(li, text)) visibleCount++;
+      });
+
+      var hint = ensureNoResult();
+      if (q && visibleCount === 0) {
+        hint.classList.add('show');
+      } else {
+        hint.classList.remove('show');
+      }
+    }
+
+    if (searchBtn) {
+      searchBtn.addEventListener('click', runSearch);
+    }
+    if (searchInput) {
+      searchInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          runSearch();
+        }
+      });
+      searchInput.addEventListener('input', function () {
+        if (searchInput.value.trim() === '') {
+          runSearch();
+        }
+      });
+    }
+  })();
+</script>
+
+</body>
+  </html>
